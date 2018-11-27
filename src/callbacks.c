@@ -280,6 +280,203 @@ gtk_widget_show(window8);
 gtk_widget_hide(window9);
 }
 
+void
+on_coach_saveprof_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *name;
+  GtkWidget *surname;
+  GtkWidget *day;
+  GtkWidget *month;
+  GtkWidget *year;
+  GtkWidget *email;
+  GtkWidget *number;
+  char nom[30];
+  char prenom [30];
+  int jour;
+  char mois[10];
+  int annee;
+  char mail[50];
+  char num[13];
+  FILE *f;
+  name=lookup_widget(button,"coach_entry11");
+  surname=lookup_widget(button,"coach_entry12");
+  day=lookup_widget(button,"coach_spinbutton5");
+  month=lookup_widget(button,"coach_combobox3");
+  year=lookup_widget(button,"coach_spinbutton6");
+  email=lookup_widget(button,"coach_entry13");
+  number=lookup_widget(button,"coach_entry14");
+  strcpy(nom,gtk_entry_get_text(GTK_ENTRY(name)));
+  strcpy(prenom,gtk_entry_get_text(GTK_ENTRY(surname)));
+  jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(day));
+  strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(month)));
+  annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(year));
+  strcpy(mail,gtk_entry_get_text(GTK_ENTRY(email)));
+  strcpy(num,gtk_entry_get_text(GTK_ENTRY(number)));
+  f=fopen("profilecoach.txt","w");
+  fprintf(f,"%s %s %d %s %d %s %s",nom,prenom,jour,mois,annee,mail,num);
+  fclose(f);
+}
+
+
+void
+on_coach_save_clicked                  (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *username;
+  GtkWidget *seance;
+  GtkWidget *poids_old;
+  GtkWidget *poids_new;
+  char user;
+  int sessions,old,new;
+  FILE *f;
+  username=lookup_widget(button,"coach_userrap");
+  seance=lookup_widget(button,"coach_spinbutton4");
+  poids_old=lookup_widget(button,"spinbutton5");
+  poids_new=lookup_widget(button,"spinbutton6");
+  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
+  sessions=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(seance));
+  old=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(poids_old));
+  new=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(poids_new));
+  f=fopen("rap_coach","w");
+  fprintf(f,"%s %d %d %d",user,sessions,old,new);
+  fclose(f);
+
+}
+
+
+void
+on_coach_saveemp_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *seancel;
+  GtkWidget *seancem;
+  GtkWidget *seanceme;
+  GtkWidget *seancej;
+  GtkWidget *seancev;
+  GtkWidget *seances;
+  GtkWidget *entrainementl;
+  GtkWidget *entrainementm;
+  GtkWidget *entrainementme;
+  GtkWidget *entrainementj;
+  GtkWidget *entrainementv;
+  GtkWidget *entrainements;
+  char lundis[50];
+  char lundie[50];
+  char mardis[50];
+  char mardie[50];
+  char mercredis[50];
+  char mercredie[50];
+  char jeudis[50];
+  char jeudie[50];
+  char vendredis[50];
+  char vendredie[50];
+  char samedis[50];
+  char samedie[50];
+  FILE *f;
+  seancel=lookup_widget(button,"coach_seancel");
+  seancem=lookup_widget(button,"coach_séancem");
+  seanceme=lookup_widget(button,"coach_séanceme");
+  seancej=lookup_widget(button,"coach_séancej");
+  seancev=lookup_widget(button,"coach_séancev");
+  seances=lookup_widget(button,"coach_séances");
+  entrainementl=lookup_widget(button,"coach_entrainementl");
+  entrainementm=lookup_widget(button,"coach_entrainementm");
+  entrainementme=lookup_widget(button,"coach_entrainementme");
+  entrainementj=lookup_widget(button,"coach_entrainementj");
+  entrainementv=lookup_widget(button,"coach_entrainementv");
+  entrainements=lookup_widget(button,"coach_entrainements");
+  strcpy(lundis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancel)));
+  strcpy(mardis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancem)));
+  strcpy(mercredis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seanceme)));
+  strcpy(jeudis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancej)));
+  strcpy(vendredis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancev)));
+  strcpy(samedis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seances)));
+  strcpy(lundie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementl)));
+  strcpy(mardie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementm)));
+  strcpy(mercredie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementme)));
+  strcpy(jeudie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementj)));
+  strcpy(vendredie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementv)));
+  strcpy(samedie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainements)));
+  f=fopen("empcoach.txt","w");
+  fprintf(f,"Lundi: %s %s\nMardi: %s %s\nMercredi: %s %s\nJeudi: %s %s\nVendredi: %s %s\nSamedi: %s %s\n",lundis,lundie,mardis,mardie,mercredis,mercredie,jeudis,jeudie,vendredis,vendredie,vendredis,samedie);
+  fclose(f);
+}
+
+void
+on_Nutritionniste_button13_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button14_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button16_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button15_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button18_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button12_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button17_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button19_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+
+
+void
+on_coach_valider_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
 
 void
 on_adherant_comboboxentry1_changed     (GtkComboBox     *combobox,
@@ -525,7 +722,7 @@ on_adherant_spinbutton14_change_value  (GtkSpinButton   *spinbutton,
 
 
 void
-on_adherant_button23_clicked           (GtkButton       *button,
+on_comboboxentry4_changed              (GtkComboBox     *combobox,
                                         gpointer         user_data)
 {
 
@@ -533,7 +730,7 @@ on_adherant_button23_clicked           (GtkButton       *button,
 
 
 void
-on_comboboxentry4_changed              (GtkComboBox     *combobox,
+on_adherant_button23_clicked           (GtkButton       *button,
                                         gpointer         user_data)
 {
 
@@ -616,202 +813,6 @@ on_adherant_button29_clicked           (GtkButton       *button,
 
 
 void
-on_coach_saveprof_clicked              (GtkButton       *button,
-                                        gpointer         user_data)
-{
-  GtkWidget *name;
-  GtkWidget *surname;
-  GtkWidget *day;
-  GtkWidget *month;
-  GtkWidget *year;
-  GtkWidget *email;
-  GtkWidget *number;
-  char nom[30];
-  char prenom [30];
-  int jour;
-  char mois[10];
-  int annee;
-  char mail[50];
-  char num[13];
-  FILE *f;
-  name=lookup_widget(button,"coach_entry11");
-  surname=lookup_widget(button,"coach_entry12");
-  day=lookup_widget(button,"coach_spinbutton5");
-  month=lookup_widget(button,"coach_combobox3");
-  year=lookup_widget(button,"coach_spinbutton6");
-  email=lookup_widget(button,"coach_entry13");
-  number=lookup_widget(button,"coach_entry14");
-  strcpy(nom,gtk_entry_get_text(GTK_ENTRY(name)));
-  strcpy(prenom,gtk_entry_get_text(GTK_ENTRY(surname)));
-  jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(day));
-  strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(month)));
-  annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(year));
-  strcpy(mail,gtk_entry_get_text(GTK_ENTRY(email)));
-  strcpy(num,gtk_entry_get_text(GTK_ENTRY(number)));
-  f=fopen("profilecoach.txt";"w");
-  fprintf(f,"%s %s %d %s %d %s %s",nom,prenom,jour,mois,annee,mail,num);
-  fclose(f);
-}
-
-
-void
-on_coach_valider_clicked               (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_coach_save_clicked                  (GtkButton       *button,
-                                        gpointer         user_data)
-{
-  GtkWidget *username;
-  GtkWidget *seance;
-  GtkWidget *poids_old;
-  GtkWidget *poids_new;
-  char user;
-  int sessions,old,new;
-  FILE *f;
-  username=lookup_widget(button,"coach_userrap");
-  seance=lookup_widget(button,"coach_spinbutton4");
-  poids_old=lookup_widget(button,"spinbutton5");
-  poids_new=lookup_widget(button,"spinbutton6");
-  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
-  sessions=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(seance));
-  old=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(poids_old));
-  new=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(poids_new));
-  f=fopen("rap_coach","w");
-  fprintf(f,"%s %d %d %d",user,sessions,old,new);
-  fclose(f);
-
-}
-
-
-void
-on_coach_saveemp_clicked               (GtkButton       *button,
-                                        gpointer         user_data)
-{
-  GtkWidget *seancel;
-  GtkWidget *senacem;
-  GtkWidget *seanceme;
-  GtkWidget *seancej;
-  GtkWidget *seancev;
-  GtkWidget *seances;
-  GtkWidget *entrainementl;
-  GtkWidget *entrainementm;
-  GtkWidget *entrainementme;
-  GtkWidget *entrainementj;
-  GtkWidget *entrainementv;
-  GtkWidget *entrainements;
-  char lundis[50];
-  char lundie[50];
-  char mardis[50];
-  char mardie[50];
-  char mercredis[50];
-  char mercredie[50];
-  char jeudis[50];
-  char jeudie[50];
-  char vendredis[50];
-  char vendredie[50];
-  char samedis[50];
-  char samedie[50];
-  FILE *f;
-  senacel=lookup_widget(button,"coach_seancel");
-  senacem=lookup_widget(button,"coach_seancem");
-  senaceme=lookup_widget(button,"coach_seanceme");
-  senacej=lookup_widget(button,"coach_seancej");
-  senacev=lookup_widget(button,"coach_seancev");
-  senaces=lookup_widget(button,"coach_seances");
-  entrainementl=lookup_widget(button,"coach_entrainementl");
-  entrainementm=lookup_widget(button,"coach_entrainementm");
-  entrainementme=lookup_widget(button,"coach_entrainementme");
-  entrainementj=lookup_widget(button,"coach_entrainementj");
-  entrainementv=lookup_widget(button,"coach_entrainementv");
-  entrainements=lookup_widget(button,"coach_entrainements");
-  strcpy(lundis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancel)));
-  strcpy(mardis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancem)));
-  strcpy(mercredis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seanceme)));
-  strcpy(jeudis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancej)));
-  strcpy(vendredis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seancev)));
-  strcpy(samedis,gtk_combo_box_get_active_text(GTK_COMBO_BOX(seances)));
-  strcpy(lundie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementl)));
-  strcpy(mardie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementm)));
-  strcpy(mercredie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementme)));
-  strcpy(jeudie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementj)));
-  strcpy(vendredie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainementv)));
-  strcpy(samedie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(entrainements)));
-  f=fopen("empcoach.txt","w");
-  fprintf(f,"Lundi: %s %s\nMardi: %s %s\nMercredi: %s %s\nJeudi: %s %s\nVendredi: %s %s\nSamedi: %s %s\n",seancel,entrainementl,seancem,entrainementm,seanceme,entrainementme,seancej,entrainementj,seancev,entrainementv,seances,entrainements);
-  fclose(f);
-}
-
-
-void
-on_Nutritionniste_button13_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button14_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button16_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button15_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button18_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button12_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button17_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
-on_Nutritionniste_button19_clicked     (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
 on_button12_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
@@ -829,6 +830,14 @@ on_kine_gererfiche_clicked             (GtkButton       *button,
 
 void
 on_kine_rapport_clicked                (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_quit1_clicked                  (GtkButton       *button,
                                         gpointer         user_data)
 {
 
@@ -868,16 +877,9 @@ on_kine_button19_clicked               (GtkButton       *button,
 
 
 void
-on_kine_quit1_clicked                  (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
-
-void
 on_kine_button20_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
 
 }
+

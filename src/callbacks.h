@@ -5,9 +5,13 @@ void
 on_button1_clicked                     (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
 
+
 void
 on_button2_clicked                     (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
+
+
+
 
 void
 on_button3_clicked                     (GtkWidget       *objet_graphique,
@@ -15,19 +19,23 @@ on_button3_clicked                     (GtkWidget       *objet_graphique,
 
 void
 on_button4_clicked                     (GtkWidget       *button,
-                                        gpointer         user_data);
+
+                                      gpointer         user_data);
+
 
 void
 on_button6_clicked                     (GtkWidget *object_graphique,
                                         gpointer         user_data);
 
 void
-on_button5_clicked                     (GtkWidget       *object_graphique,
+on_button5_clicked                     (GtkWidget *object_graphique,
                                         gpointer         user_data);
+
 
 void
 on_button7_clicked                     (GtkButton       *button,
                                         gpointer         user_data);
+
 
 void
 on_button8_clicked                     (GtkButton       *button,
@@ -41,9 +49,65 @@ void
 on_button10_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data);
 
+
 void
 on_button11_clicked                    (GtkButton       *object_graphique,
                                         gpointer         user_data);
+
+void
+on_coach_saveprof_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+
+
+void
+on_coach_save_clicked                  (GtkButton       *button,
+                                        gpointer         user_data);
+
+
+void
+on_coach_saveemp_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button13_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button14_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button16_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button15_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button18_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button12_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button17_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Nutritionniste_button19_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+
+
+
+void
+on_coach_valider_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
 
 void
 on_adherant_comboboxentry1_changed     (GtkComboBox     *combobox,
@@ -177,11 +241,11 @@ on_adherant_spinbutton14_change_value  (GtkSpinButton   *spinbutton,
                                         gpointer         user_data);
 
 void
-on_adherant_button23_clicked           (GtkButton       *button,
+on_comboboxentry4_changed              (GtkComboBox     *combobox,
                                         gpointer         user_data);
 
 void
-on_comboboxentry4_changed              (GtkComboBox     *combobox,
+on_adherant_button23_clicked           (GtkButton       *button,
                                         gpointer         user_data);
 
 void
@@ -224,54 +288,6 @@ on_adherant_button29_clicked           (GtkButton       *button,
                                         gpointer         user_data);
 
 void
-on_coach_saveprof_clicked              (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_coach_valider_clicked               (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_coach_save_clicked                  (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_coach_saveemp_clicked               (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button13_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button14_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button16_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button15_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button18_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button12_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button17_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_Nutritionniste_button19_clicked     (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
 on_button12_clicked                    (GtkButton       *button,
                                         gpointer         user_data);
 
@@ -281,6 +297,10 @@ on_kine_gererfiche_clicked             (GtkButton       *button,
 
 void
 on_kine_rapport_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_kine_quit1_clicked                  (GtkButton       *button,
                                         gpointer         user_data);
 
 void
@@ -297,10 +317,6 @@ on_kine_button18_clicked               (GtkButton       *button,
 
 void
 on_kine_button19_clicked               (GtkButton       *button,
-                                        gpointer         user_data);
-
-void
-on_kine_quit1_clicked                  (GtkButton       *button,
                                         gpointer         user_data);
 
 void

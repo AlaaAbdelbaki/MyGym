@@ -1614,32 +1614,6 @@
 	      </child>
 
 	      <child>
-		<widget class="GtkLabel" id="coach_label83">
-		  <property name="width_request">49</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Nom</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">80</property>
-		  <property name="y">48</property>
-		</packing>
-	      </child>
-
-	      <child>
 		<widget class="GtkEntry" id="coach_entry12">
 		  <property name="width_request">312</property>
 		  <property name="height_request">32</property>
@@ -1700,32 +1674,6 @@
 	      </child>
 
 	      <child>
-		<widget class="GtkLabel" id="coach_label84">
-		  <property name="width_request">80</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Prénom</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">64</property>
-		  <property name="y">96</property>
-		</packing>
-	      </child>
-
-	      <child>
 		<widget class="GtkSpinButton" id="coach_spinbutton5">
 		  <property name="width_request">60</property>
 		  <property name="height_request">27</property>
@@ -1761,84 +1709,6 @@
 		</widget>
 		<packing>
 		  <property name="x">432</property>
-		  <property name="y">136</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label86">
-		  <property name="width_request">72</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">E-mail</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">56</property>
-		  <property name="y">184</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label87">
-		  <property name="width_request">176</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Numéro de téléphone</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">8</property>
-		  <property name="y">232</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label85">
-		  <property name="width_request">144</property>
-		  <property name="height_request">25</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Date de naissance</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">24</property>
 		  <property name="y">136</property>
 		</packing>
 	      </child>
@@ -1948,6 +1818,136 @@ Décembre</property>
 		  <property name="y">136</property>
 		</packing>
 	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label83a">
+		  <property name="width_request">49</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Nom</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">80</property>
+		  <property name="y">48</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label84a">
+		  <property name="width_request">80</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Prénom</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">64</property>
+		  <property name="y">96</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label85a">
+		  <property name="width_request">144</property>
+		  <property name="height_request">25</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Date de naissance</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">24</property>
+		  <property name="y">136</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label86a">
+		  <property name="width_request">72</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">E-mail</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">56</property>
+		  <property name="y">184</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label87a">
+		  <property name="width_request">176</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Numéro de téléphone</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">8</property>
+		  <property name="y">232</property>
+		</packing>
+	      </child>
 	    </widget>
 	    <packing>
 	      <property name="tab_expand">False</property>
@@ -1956,7 +1956,7 @@ Décembre</property>
 	  </child>
 
 	  <child>
-	    <widget class="GtkLabel" id="coach_label83">
+	    <widget class="GtkLabel" id="coach_label83b">
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">Modifier mon profil</property>
 	      <property name="use_underline">False</property>
@@ -1981,162 +1981,6 @@ Décembre</property>
 	  <child>
 	    <widget class="GtkFixed" id="fixed20">
 	      <property name="visible">True</property>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label83">
-		  <property name="width_request">56</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Lundi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">112</property>
-		  <property name="y">48</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label84">
-		  <property name="width_request">49</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Mardi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">120</property>
-		  <property name="y">112</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label85">
-		  <property name="width_request">80</property>
-		  <property name="height_request">16</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Mercredi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">104</property>
-		  <property name="y">176</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label86">
-		  <property name="width_request">49</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Jeudi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">120</property>
-		  <property name="y">240</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label87">
-		  <property name="width_request">96</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Vendredi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">96</property>
-		  <property name="y">304</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label88">
-		  <property name="width_request">49</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Samedi</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">120</property>
-		  <property name="y">368</property>
-		</packing>
-	      </child>
 
 	      <child>
 		<widget class="GtkComboBox" id="coach_séanceme">
@@ -2415,6 +2259,162 @@ Cardio</property>
 		  <property name="y">40</property>
 		</packing>
 	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label84">
+		  <property name="width_request">49</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Mardi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">120</property>
+		  <property name="y">112</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label85">
+		  <property name="width_request">80</property>
+		  <property name="height_request">16</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Mercredi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">104</property>
+		  <property name="y">176</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label86">
+		  <property name="width_request">49</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Jeudi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">120</property>
+		  <property name="y">240</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label87">
+		  <property name="width_request">96</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Vendredi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">96</property>
+		  <property name="y">304</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label88">
+		  <property name="width_request">49</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Samedi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">120</property>
+		  <property name="y">368</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label83">
+		  <property name="width_request">56</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Lundi</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">112</property>
+		  <property name="y">48</property>
+		</packing>
+	      </child>
 	    </widget>
 	    <packing>
 	      <property name="tab_expand">False</property>
@@ -2423,7 +2423,7 @@ Cardio</property>
 	  </child>
 
 	  <child>
-	    <widget class="GtkLabel" id="coach_label84">
+	    <widget class="GtkLabel" id="coach_label84b">
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">Modifier mon emploi</property>
 	      <property name="use_underline">False</property>
@@ -2448,32 +2448,6 @@ Cardio</property>
 	  <child>
 	    <widget class="GtkFixed" id="fixed21">
 	      <property name="visible">True</property>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label89">
-		  <property name="width_request">224</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Entrer le nom de l'utilisateur</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">88</property>
-		  <property name="y">72</property>
-		</packing>
-	      </child>
 
 	      <child>
 		<widget class="GtkEntry" id="coach_usercons">
@@ -2594,6 +2568,32 @@ Cardio</property>
 		  <property name="y">64</property>
 		</packing>
 	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label89">
+		  <property name="width_request">224</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Entrer le nom de l'utilisateur</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">88</property>
+		  <property name="y">72</property>
+		</packing>
+	      </child>
 	    </widget>
 	    <packing>
 	      <property name="tab_expand">False</property>
@@ -2602,7 +2602,7 @@ Cardio</property>
 	  </child>
 
 	  <child>
-	    <widget class="GtkLabel" id="coach_label85">
+	    <widget class="GtkLabel" id="coach_label85b">
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">Consulter le profil des adhérants</property>
 	      <property name="use_underline">False</property>
@@ -2649,32 +2649,6 @@ Cardio</property>
 	      </child>
 
 	      <child>
-		<widget class="GtkLabel" id="coach_label90">
-		  <property name="width_request">232</property>
-		  <property name="height_request">16</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Entrer le nom de l'utilisateur</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">64</property>
-		  <property name="y">56</property>
-		</packing>
-	      </child>
-
-	      <child>
 		<widget class="GtkSpinButton" id="coach_spinbutton4">
 		  <property name="width_request">60</property>
 		  <property name="height_request">27</property>
@@ -2690,32 +2664,6 @@ Cardio</property>
 		</widget>
 		<packing>
 		  <property name="x">344</property>
-		  <property name="y">120</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label91">
-		  <property name="width_request">208</property>
-		  <property name="height_request">24</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Nombre de séances pris</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">72</property>
 		  <property name="y">120</property>
 		</packing>
 	      </child>
@@ -2741,32 +2689,6 @@ Cardio</property>
 	      </child>
 
 	      <child>
-		<widget class="GtkLabel" id="coach_label92">
-		  <property name="width_request">128</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Ancien poids</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">112</property>
-		  <property name="y">200</property>
-		</packing>
-	      </child>
-
-	      <child>
 		<widget class="GtkSpinButton" id="spinbutton6">
 		  <property name="width_request">60</property>
 		  <property name="height_request">27</property>
@@ -2783,32 +2705,6 @@ Cardio</property>
 		<packing>
 		  <property name="x">640</property>
 		  <property name="y">192</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="coach_label93">
-		  <property name="width_request">128</property>
-		  <property name="height_request">17</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">Nouveau poids</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">False</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">488</property>
-		  <property name="y">200</property>
 		</packing>
 	      </child>
 
@@ -2891,6 +2787,110 @@ Cardio</property>
 		  <property name="y">384</property>
 		</packing>
 	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label92">
+		  <property name="width_request">128</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Ancien poids</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">112</property>
+		  <property name="y">200</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label93">
+		  <property name="width_request">128</property>
+		  <property name="height_request">17</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Nouveau poids</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">488</property>
+		  <property name="y">200</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label90">
+		  <property name="width_request">232</property>
+		  <property name="height_request">16</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Entrer le nom de l'utilisateur</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">64</property>
+		  <property name="y">56</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="coach_label91">
+		  <property name="width_request">208</property>
+		  <property name="height_request">24</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Nombre de séances pris</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">72</property>
+		  <property name="y">120</property>
+		</packing>
+	      </child>
 	    </widget>
 	    <packing>
 	      <property name="tab_expand">False</property>
@@ -2899,7 +2899,7 @@ Cardio</property>
 	  </child>
 
 	  <child>
-	    <widget class="GtkLabel" id="coach_label86">
+	    <widget class="GtkLabel" id="coach_label86b">
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">Envoyer un rapport</property>
 	      <property name="use_underline">False</property>
@@ -2965,32 +2965,6 @@ Cardio</property>
 	  <child>
 	    <widget class="GtkFixed" id="fixed12">
 	      <property name="visible">True</property>
-
-	      <child>
-		<widget class="GtkLabel" id="espace.adherants">
-		  <property name="width_request">568</property>
-		  <property name="height_request">16</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">espace adherants</property>
-		  <property name="use_underline">True</property>
-		  <property name="use_markup">True</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">0</property>
-		  <property name="y">8</property>
-		</packing>
-	      </child>
 
 	      <child>
 		<widget class="GtkComboBoxEntry" id="adherant_comboboxentry1">
@@ -3329,6 +3303,32 @@ coach</property>
 		  <property name="y">288</property>
 		</packing>
 	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="espace_adherants">
+		  <property name="width_request">568</property>
+		  <property name="height_request">16</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">espace adherants</property>
+		  <property name="use_underline">True</property>
+		  <property name="use_markup">True</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">0</property>
+		  <property name="y">8</property>
+		</packing>
+	      </child>
 	    </widget>
 	    <packing>
 	      <property name="tab_expand">False</property>
@@ -3337,7 +3337,7 @@ coach</property>
 	  </child>
 
 	  <child>
-	    <widget class="GtkLabel" id="espace_adherants">
+	    <widget class="GtkLabel" id="espace_adherantsb">
 	      <property name="visible">True</property>
 	      <property name="label" translatable="yes">espace_adherants</property>
 	      <property name="use_underline">False</property>
@@ -3620,8 +3620,38 @@ poids:
 	      </child>
 
 	      <child>
+		<widget class="GtkLabel" id="adherant_label54">
+		  <property name="width_request">184</property>
+		  <property name="height_request">104</property>
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">**********
+**********
+**********
+*********
+*********</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">True</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="x">256</property>
+		  <property name="y">40</property>
+		</packing>
+	      </child>
+
+	      <child>
 		<widget class="GtkButton" id="adherant_button16">
-		  <property name="width_request">232</property>
+		  <property name="width_request">280</property>
 		  <property name="height_request">64</property>
 		  <property name="visible">True</property>
 		  <property name="can_focus">True</property>
@@ -3696,36 +3726,6 @@ poids:
 		<packing>
 		  <property name="x">376</property>
 		  <property name="y">176</property>
-		</packing>
-	      </child>
-
-	      <child>
-		<widget class="GtkLabel" id="adherant_label54">
-		  <property name="width_request">184</property>
-		  <property name="height_request">104</property>
-		  <property name="visible">True</property>
-		  <property name="label" translatable="yes">**********
-**********
-**********
-*********
-*********</property>
-		  <property name="use_underline">False</property>
-		  <property name="use_markup">True</property>
-		  <property name="justify">GTK_JUSTIFY_LEFT</property>
-		  <property name="wrap">False</property>
-		  <property name="selectable">False</property>
-		  <property name="xalign">0.5</property>
-		  <property name="yalign">0.5</property>
-		  <property name="xpad">0</property>
-		  <property name="ypad">0</property>
-		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		  <property name="width_chars">-1</property>
-		  <property name="single_line_mode">False</property>
-		  <property name="angle">0</property>
-		</widget>
-		<packing>
-		  <property name="x">256</property>
-		  <property name="y">40</property>
 		</packing>
 	      </child>
 	    </widget>

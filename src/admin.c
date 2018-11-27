@@ -22,17 +22,17 @@ void ajouter(char login[], char password[],int role)
    
 }
 //=============================================================================
-void info(char nom[],char prenom[],int jour,int mois,int annee,char id[],char tel[],char ville[],char mail[],int role)
+void info(char *nom,char *prenom,int jour,int mois,int annee,char *id,char *tel,char *ville,char *mail,int role)
 {
-    FILE *info;
+    FILE *f;
 
-    info=fopen("info.txt","a");
-    if (info!=NULL)
+    f=fopen("info.txt","a");
+    if (f!=NULL)
     {
 
    
-    fprintf(info,"%s %s %d %d %d %s %s %s\n",nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
-    fclose(info);
+    fprintf(f,"%s %s %d %d %d %s %s %s %s %d\n",nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
+    fclose(f);
     }
     else printf("impossssible d'ouvrir\n");
 }
