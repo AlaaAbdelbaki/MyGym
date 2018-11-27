@@ -322,3 +322,39 @@ on_kine_button19_clicked               (GtkButton       *button,
 void
 on_kine_button20_clicked               (GtkButton       *button,
                                         gpointer         user_data);
+
+void
+on_dietsaveprof_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietrv10_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietrv20_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietrv30_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietaff_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietadd_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietmod_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_buttondietdel_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+                                        
+void
+on_buttondietdel_clicked               (GtkButton       *button,
+                                        gpointer         user_data);                         
