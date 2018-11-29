@@ -253,7 +253,7 @@ FILE *fichierliste;
      pBuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(tviewliste));
      
 
-     if(fichierliste=fopen("/home/anas/Projets/projet1/src/info.txt","r")){
+     if(fichierliste=fopen("info.txt","r")){
               while(fgets(buffer,30,fichierliste)){
            
 		gtk_text_buffer_get_end_iter(pBuffer, &fin);

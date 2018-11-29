@@ -11,7 +11,7 @@ int verifier(char username[],char password[])
 	int role;
 	int n=-1;
 
-	f=fopen("/home/anas/Projets/projet1/src/users.txt","r");
+	f=fopen("users.txt","r");
 	if(f!=NULL)
 	{
 		while(fscanf(f,"%s %s %d\n",entry1,entry2,&role)!=EOF)

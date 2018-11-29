@@ -43,7 +43,7 @@ void afficher ()
    
     FILE* f;
     char r_login[30];char r_password[30];int r_role;
-    f=fopen("/home/anas/Projects/project1/src/listeusers.txt","r");
+    f=fopen("listeusers.txt","r");
         while (!EOF)
         {
         fscanf(f,"%s %s %d",r_login,r_password,&r_role);
