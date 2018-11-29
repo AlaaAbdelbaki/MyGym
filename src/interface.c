@@ -229,7 +229,164 @@ create_window4 (void)
 {
   GtkWidget *window4;
   GtkWidget *fixed4;
-  GtkWidget *label5;
+  GtkWidget *notebook1;
+  GtkWidget *fixed12;
+  GtkWidget *espace_adherants;
+  GtkWidget *adherant_comboboxentry1;
+  GtkWidget *rdv_adherant;
+  GtkWidget *consulter_cours_adherant;
+  GtkWidget *adherant_button12;
+  GtkWidget *alignment12;
+  GtkWidget *hbox12;
+  GtkWidget *image14;
+  GtkWidget *label48;
+  GtkWidget *inf_per_aderant;
+  GtkWidget *adherant_button13;
+  GtkWidget *alignment13;
+  GtkWidget *hbox13;
+  GtkWidget *image15;
+  GtkWidget *label50;
+  GtkWidget *adherant_button14;
+  GtkWidget *alignment14;
+  GtkWidget *hbox14;
+  GtkWidget *image16;
+  GtkWidget *label51;
+  GtkWidget *espace_adherants;
+  GtkWidget *fixed13;
+  GtkWidget *adherant_entry11;
+  GtkWidget *adherant_entry12;
+  GtkObject *adherant_spinbutton4_adj;
+  GtkWidget *adherant_spinbutton4;
+  GtkObject *adherant_spinbutton5_adj;
+  GtkWidget *adherant_spinbutton5;
+  GtkWidget *info_per;
+  GtkWidget *adherant_label53;
+  GtkWidget *adherant_label54;
+  GtkWidget *adherant_label55;
+  GtkWidget *adherant_button15;
+  GtkWidget *alignment15;
+  GtkWidget *hbox15;
+  GtkWidget *image17;
+  GtkWidget *label56;
+  GtkWidget *adherant_button16;
+  GtkWidget *alignment16;
+  GtkWidget *hbox16;
+  GtkWidget *image18;
+  GtkWidget *label57;
+  GtkWidget *informations_personnelles;
+  GtkWidget *fixed14;
+  GtkObject *adherant_spinbutton6_adj;
+  GtkWidget *adherant_spinbutton6;
+  GtkObject *adherant_spinbutton7_adj;
+  GtkWidget *adherant_spinbutton7;
+  GtkObject *adherant_spinbutton8_adj;
+  GtkWidget *adherant_spinbutton8;
+  GtkWidget *adherant_label58;
+  GtkWidget *adherant_label59;
+  GtkWidget *adherant_comboboxentry2;
+  GtkWidget *adherant_button17;
+  GtkWidget *alignment17;
+  GtkWidget *hbox17;
+  GtkWidget *image19;
+  GtkWidget *label60;
+  GtkWidget *badherant_button18;
+  GtkWidget *alignment18;
+  GtkWidget *hbox18;
+  GtkWidget *image20;
+  GtkWidget *label61;
+  GtkWidget *adherant_button19;
+  GtkWidget *alignment19;
+  GtkWidget *hbox19;
+  GtkWidget *image21;
+  GtkWidget *label62;
+  GtkWidget *rdv_med;
+  GtkWidget *fixed15;
+  GtkWidget *adherant_label64;
+  GtkObject *adherant_spinbutton9_adj;
+  GtkWidget *adherant_spinbutton9;
+  GtkObject *adherant_spinbutton10_adj;
+  GtkWidget *adherant_spinbutton10;
+  GtkObject *adherant_spinbutton11_adj;
+  GtkWidget *adherant_spinbutton11;
+  GtkWidget *adherant_label63;
+  GtkWidget *adherant_comboboxentry3;
+  GtkWidget *adherant_button20;
+  GtkWidget *alignment20;
+  GtkWidget *hbox20;
+  GtkWidget *image22;
+  GtkWidget *label65;
+  GtkWidget *adherant_button21;
+  GtkWidget *alignment21;
+  GtkWidget *hbox21;
+  GtkWidget *image23;
+  GtkWidget *label66;
+  GtkWidget *adherant_button22;
+  GtkWidget *alignment22;
+  GtkWidget *hbox22;
+  GtkWidget *image24;
+  GtkWidget *label67;
+  GtkWidget *rdv_kine;
+  GtkWidget *fixed16;
+  GtkObject *adherant_spinbutton12_adj;
+  GtkWidget *adherant_spinbutton12;
+  GtkObject *adherant_spinbutton13_adj;
+  GtkWidget *adherant_spinbutton13;
+  GtkObject *adherant_spinbutton14_adj;
+  GtkWidget *adherant_spinbutton14;
+  GtkWidget *adherant_label68;
+  GtkWidget *adherant_label69;
+  GtkWidget *adherant_comboboxentry4;
+  GtkWidget *adherant_button23;
+  GtkWidget *alignment23;
+  GtkWidget *hbox23;
+  GtkWidget *image25;
+  GtkWidget *label70;
+  GtkWidget *adherant_button24;
+  GtkWidget *alignment24;
+  GtkWidget *hbox24;
+  GtkWidget *image26;
+  GtkWidget *label71;
+  GtkWidget *adherant_button25;
+  GtkWidget *alignment25;
+  GtkWidget *hbox25;
+  GtkWidget *image27;
+  GtkWidget *label72;
+  GtkWidget *rdv_diet;
+  GtkWidget *fixed17;
+  GtkObject *adherant_spinbutton15_adj;
+  GtkWidget *adherant_spinbutton15;
+  GtkObject *adherant_spinbutton16_adj;
+  GtkWidget *adherant_spinbutton16;
+  GtkObject *adherant_spinbutton17_adj;
+  GtkWidget *adherant_spinbutton17;
+  GtkWidget *adherant_label73;
+  GtkWidget *adherant_label74;
+  GtkWidget *adherant_comboboxentry5;
+  GtkWidget *adherant_button26;
+  GtkWidget *alignment26;
+  GtkWidget *hbox26;
+  GtkWidget *image28;
+  GtkWidget *label75;
+  GtkWidget *adherant_button27;
+  GtkWidget *alignment27;
+  GtkWidget *hbox27;
+  GtkWidget *image29;
+  GtkWidget *label76;
+  GtkWidget *adherant_button28;
+  GtkWidget *alignment28;
+  GtkWidget *hbox28;
+  GtkWidget *image30;
+  GtkWidget *label77;
+  GtkWidget *rdv_coach;
+  GtkWidget *fixed18;
+  GtkWidget *adherant_label80;
+  GtkWidget *adherant_treeview1;
+  GtkWidget *adherant_button29;
+  GtkWidget *alignment29;
+  GtkWidget *hbox29;
+  GtkWidget *image31;
+  GtkWidget *label82;
+  GtkWidget *planning_cours;
 
   window4 = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window4), _("window4"));
@@ -239,15 +396,945 @@ create_window4 (void)
   gtk_widget_show (fixed4);
   gtk_container_add (GTK_CONTAINER (window4), fixed4);
 
-  label5 = gtk_label_new (_("bienvenue dans l'espace adherant"));
-  gtk_widget_show (label5);
-  gtk_fixed_put (GTK_FIXED (fixed4), label5, 56, 104);
-  gtk_widget_set_size_request (label5, 328, 80);
+  notebook1 = gtk_notebook_new ();
+  gtk_widget_show (notebook1);
+  gtk_fixed_put (GTK_FIXED (fixed4), notebook1, 0, 0);
+  gtk_widget_set_size_request (notebook1, 696, 400);
+
+  fixed12 = gtk_fixed_new ();
+  gtk_widget_show (fixed12);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed12);
+
+  espace_adherants = gtk_label_new_with_mnemonic (_("espace adherants"));
+  gtk_widget_show (espace_adherants);
+  gtk_fixed_put (GTK_FIXED (fixed12), espace_adherants, 0, 8);
+  gtk_widget_set_size_request (espace_adherants, 568, 16);
+  gtk_label_set_use_markup (GTK_LABEL (espace_adherants), TRUE);
+
+  adherant_comboboxentry1 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (adherant_comboboxentry1);
+  gtk_fixed_put (GTK_FIXED (fixed12), adherant_comboboxentry1, 232, 64);
+  gtk_widget_set_size_request (adherant_comboboxentry1, 189, 29);
+  gtk_container_set_border_width (GTK_CONTAINER (adherant_comboboxentry1), 4);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (adherant_comboboxentry1), _("medecin nutritionniste"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (adherant_comboboxentry1), _("dieteticien"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (adherant_comboboxentry1), _("kinesitherapeute"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (adherant_comboboxentry1), _("coach"));
+
+  rdv_adherant = gtk_label_new (_("prendre un rendez-vous:"));
+  gtk_widget_show (rdv_adherant);
+  gtk_fixed_put (GTK_FIXED (fixed12), rdv_adherant, 0, 64);
+  gtk_widget_set_size_request (rdv_adherant, 184, 32);
+  gtk_label_set_use_markup (GTK_LABEL (rdv_adherant), TRUE);
+
+  consulter_cours_adherant = gtk_label_new (_("Consulter le planning des cours :"));
+  gtk_widget_show (consulter_cours_adherant);
+  gtk_fixed_put (GTK_FIXED (fixed12), consulter_cours_adherant, 0, 136);
+  gtk_widget_set_size_request (consulter_cours_adherant, 240, 40);
+  gtk_label_set_use_markup (GTK_LABEL (consulter_cours_adherant), TRUE);
+
+  adherant_button12 = gtk_button_new ();
+  gtk_widget_show (adherant_button12);
+  gtk_fixed_put (GTK_FIXED (fixed12), adherant_button12, 320, 136);
+  gtk_widget_set_size_request (adherant_button12, 120, 40);
+
+  alignment12 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment12);
+  gtk_container_add (GTK_CONTAINER (adherant_button12), alignment12);
+
+  hbox12 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox12);
+  gtk_container_add (GTK_CONTAINER (alignment12), hbox12);
+
+  image14 = gtk_image_new_from_stock ("gtk-open", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image14);
+  gtk_box_pack_start (GTK_BOX (hbox12), image14, FALSE, FALSE, 0);
+
+  label48 = gtk_label_new_with_mnemonic (_("le planning"));
+  gtk_widget_show (label48);
+  gtk_box_pack_start (GTK_BOX (hbox12), label48, FALSE, FALSE, 0);
+
+  inf_per_aderant = gtk_label_new (_("modifier vos informations personnelles:"));
+  gtk_widget_show (inf_per_aderant);
+  gtk_fixed_put (GTK_FIXED (fixed12), inf_per_aderant, 0, 224);
+  gtk_widget_set_size_request (inf_per_aderant, 288, 32);
+  gtk_label_set_use_markup (GTK_LABEL (inf_per_aderant), TRUE);
+
+  adherant_button13 = gtk_button_new ();
+  gtk_widget_show (adherant_button13);
+  gtk_fixed_put (GTK_FIXED (fixed12), adherant_button13, 368, 224);
+  gtk_widget_set_size_request (adherant_button13, 96, 32);
+
+  alignment13 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment13);
+  gtk_container_add (GTK_CONTAINER (adherant_button13), alignment13);
+
+  hbox13 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox13);
+  gtk_container_add (GTK_CONTAINER (alignment13), hbox13);
+
+  image15 = gtk_image_new_from_stock ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image15);
+  gtk_box_pack_start (GTK_BOX (hbox13), image15, FALSE, FALSE, 0);
+
+  label50 = gtk_label_new_with_mnemonic (_("modifier"));
+  gtk_widget_show (label50);
+  gtk_box_pack_start (GTK_BOX (hbox13), label50, FALSE, FALSE, 0);
+
+  adherant_button14 = gtk_button_new ();
+  gtk_widget_show (adherant_button14);
+  gtk_fixed_put (GTK_FIXED (fixed12), adherant_button14, 184, 288);
+  gtk_widget_set_size_request (adherant_button14, 168, 40);
+
+  alignment14 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment14);
+  gtk_container_add (GTK_CONTAINER (adherant_button14), alignment14);
+
+  hbox14 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox14);
+  gtk_container_add (GTK_CONTAINER (alignment14), hbox14);
+
+  image16 = gtk_image_new_from_stock ("gtk-disconnect", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image16);
+  gtk_box_pack_start (GTK_BOX (hbox14), image16, FALSE, FALSE, 0);
+
+  label51 = gtk_label_new_with_mnemonic (_("se deconnecter"));
+  gtk_widget_show (label51);
+  gtk_box_pack_start (GTK_BOX (hbox14), label51, FALSE, FALSE, 0);
+
+  espace_adherants = gtk_label_new (_("espace_adherants"));
+  gtk_widget_show (espace_adherants);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 0), espace_adherants);
+
+  fixed13 = gtk_fixed_new ();
+  gtk_widget_show (fixed13);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed13);
+
+  adherant_entry11 = gtk_entry_new ();
+  gtk_widget_show (adherant_entry11);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_entry11, 192, 152);
+  gtk_widget_set_size_request (adherant_entry11, 160, 27);
+  gtk_entry_set_text (GTK_ENTRY (adherant_entry11), _("6666666"));
+  gtk_entry_set_invisible_char (GTK_ENTRY (adherant_entry11), 8226);
+
+  adherant_entry12 = gtk_entry_new ();
+  gtk_widget_show (adherant_entry12);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_entry12, 192, 184);
+  gtk_widget_set_size_request (adherant_entry12, 160, 27);
+  gtk_entry_set_text (GTK_ENTRY (adherant_entry12), _("mmm@esprit.tn"));
+  gtk_entry_set_invisible_char (GTK_ENTRY (adherant_entry12), 8226);
+
+  adherant_spinbutton4_adj = gtk_adjustment_new (150, 50, 250, 1, 10, 10);
+  adherant_spinbutton4 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton4_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton4);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_spinbutton4, 192, 224);
+  gtk_widget_set_size_request (adherant_spinbutton4, 160, 24);
+
+  adherant_spinbutton5_adj = gtk_adjustment_new (20, 15, 250, 1, 10, 10);
+  adherant_spinbutton5 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton5_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton5);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_spinbutton5, 192, 256);
+  gtk_widget_set_size_request (adherant_spinbutton5, 160, 24);
+
+  info_per = gtk_label_new (_("informations personnelles"));
+  gtk_widget_show (info_per);
+  gtk_fixed_put (GTK_FIXED (fixed13), info_per, 0, 8);
+  gtk_widget_set_size_request (info_per, 616, 16);
+  gtk_label_set_use_markup (GTK_LABEL (info_per), TRUE);
+
+  adherant_label53 = gtk_label_new (_("Nom:\nPrenom:\ndate de naissance:\nnumero de CIN:\nnumero d'abonnement:"));
+  gtk_widget_show (adherant_label53);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_label53, 32, 24);
+  gtk_widget_set_size_request (adherant_label53, 232, 136);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label53), TRUE);
+
+  adherant_label54 = gtk_label_new (_("**********\n**********\n**********\n*********\n*********"));
+  gtk_widget_show (adherant_label54);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_label54, 256, 40);
+  gtk_widget_set_size_request (adherant_label54, 184, 104);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label54), TRUE);
+
+  adherant_label55 = gtk_label_new (_("numero de telephone:\n\nadresse e-mail:\n\ntaille:\n\npoids:\n\n"));
+  gtk_widget_show (adherant_label55);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_label55, 16, 160);
+  gtk_widget_set_size_request (adherant_label55, 176, 152);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label55), TRUE);
+
+  adherant_button15 = gtk_button_new ();
+  gtk_widget_show (adherant_button15);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_button15, 192, 312);
+  gtk_widget_set_size_request (adherant_button15, 136, 40);
+
+  alignment15 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment15);
+  gtk_container_add (GTK_CONTAINER (adherant_button15), alignment15);
+
+  hbox15 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox15);
+  gtk_container_add (GTK_CONTAINER (alignment15), hbox15);
+
+  image17 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image17);
+  gtk_box_pack_start (GTK_BOX (hbox15), image17, FALSE, FALSE, 0);
+
+  label56 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label56);
+  gtk_box_pack_start (GTK_BOX (hbox15), label56, FALSE, FALSE, 0);
+
+  adherant_button16 = gtk_button_new ();
+  gtk_widget_show (adherant_button16);
+  gtk_fixed_put (GTK_FIXED (fixed13), adherant_button16, 376, 176);
+  gtk_widget_set_size_request (adherant_button16, 232, 64);
+
+  alignment16 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment16);
+  gtk_container_add (GTK_CONTAINER (adherant_button16), alignment16);
+
+  hbox16 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox16);
+  gtk_container_add (GTK_CONTAINER (alignment16), hbox16);
+
+  image18 = gtk_image_new_from_stock ("gtk-edit", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image18);
+  gtk_box_pack_start (GTK_BOX (hbox16), image18, FALSE, FALSE, 0);
+
+  label57 = gtk_label_new_with_mnemonic (_("enregistrer les modifications"));
+  gtk_widget_show (label57);
+  gtk_box_pack_start (GTK_BOX (hbox16), label57, FALSE, FALSE, 0);
+
+  informations_personnelles = gtk_label_new (_("informations_personnelles"));
+  gtk_widget_show (informations_personnelles);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 1), informations_personnelles);
+
+  fixed14 = gtk_fixed_new ();
+  gtk_widget_show (fixed14);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed14);
+
+  adherant_spinbutton6_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
+  adherant_spinbutton6 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton6_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton6);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_spinbutton6, 104, 104);
+  gtk_widget_set_size_request (adherant_spinbutton6, 60, 27);
+
+  adherant_spinbutton7_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
+  adherant_spinbutton7 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton7_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton7);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_spinbutton7, 272, 104);
+  gtk_widget_set_size_request (adherant_spinbutton7, 60, 27);
+
+  adherant_spinbutton8_adj = gtk_adjustment_new (2018, 2018, 2030, 1, 10, 10);
+  adherant_spinbutton8 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton8_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton8);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_spinbutton8, 440, 104);
+  gtk_widget_set_size_request (adherant_spinbutton8, 60, 27);
+
+  adherant_label58 = gtk_label_new (_("rendez-vous et disponibilite des medecins nutritionnistes"));
+  gtk_widget_show (adherant_label58);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_label58, 0, 8);
+  gtk_widget_set_size_request (adherant_label58, 616, 16);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label58), TRUE);
+
+  adherant_label59 = gtk_label_new (_("selectionner la date du rendez-vous"));
+  gtk_widget_show (adherant_label59);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_label59, 136, 48);
+  gtk_widget_set_size_request (adherant_label59, 328, 40);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label59), TRUE);
+
+  adherant_comboboxentry2 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (adherant_comboboxentry2);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_comboboxentry2, 32, 176);
+  gtk_widget_set_size_request (adherant_comboboxentry2, 213, 29);
+
+  adherant_button17 = gtk_button_new ();
+  gtk_widget_show (adherant_button17);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_button17, 352, 176);
+  gtk_widget_set_size_request (adherant_button17, 112, 32);
+
+  alignment17 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment17);
+  gtk_container_add (GTK_CONTAINER (adherant_button17), alignment17);
+
+  hbox17 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox17);
+  gtk_container_add (GTK_CONTAINER (alignment17), hbox17);
+
+  image19 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image19);
+  gtk_box_pack_start (GTK_BOX (hbox17), image19, FALSE, FALSE, 0);
+
+  label60 = gtk_label_new_with_mnemonic (_("valider"));
+  gtk_widget_show (label60);
+  gtk_box_pack_start (GTK_BOX (hbox17), label60, FALSE, FALSE, 0);
+
+  badherant_button18 = gtk_button_new ();
+  gtk_widget_show (badherant_button18);
+  gtk_fixed_put (GTK_FIXED (fixed14), badherant_button18, 160, 248);
+  gtk_widget_set_size_request (badherant_button18, 280, 37);
+
+  alignment18 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment18);
+  gtk_container_add (GTK_CONTAINER (badherant_button18), alignment18);
+
+  hbox18 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox18);
+  gtk_container_add (GTK_CONTAINER (alignment18), hbox18);
+
+  image20 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image20);
+  gtk_box_pack_start (GTK_BOX (hbox18), image20, FALSE, FALSE, 0);
+
+  label61 = gtk_label_new_with_mnemonic (_("prendre rendez-vous"));
+  gtk_widget_show (label61);
+  gtk_box_pack_start (GTK_BOX (hbox18), label61, FALSE, FALSE, 0);
+
+  adherant_button19 = gtk_button_new ();
+  gtk_widget_show (adherant_button19);
+  gtk_fixed_put (GTK_FIXED (fixed14), adherant_button19, 32, 312);
+  gtk_widget_set_size_request (adherant_button19, 106, 37);
+
+  alignment19 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment19);
+  gtk_container_add (GTK_CONTAINER (adherant_button19), alignment19);
+
+  hbox19 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox19);
+  gtk_container_add (GTK_CONTAINER (alignment19), hbox19);
+
+  image21 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image21);
+  gtk_box_pack_start (GTK_BOX (hbox19), image21, FALSE, FALSE, 0);
+
+  label62 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label62);
+  gtk_box_pack_start (GTK_BOX (hbox19), label62, FALSE, FALSE, 0);
+
+  rdv_med = gtk_label_new (_("rdv_med"));
+  gtk_widget_show (rdv_med);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 2), rdv_med);
+
+  fixed15 = gtk_fixed_new ();
+  gtk_widget_show (fixed15);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed15);
+
+  adherant_label64 = gtk_label_new (_("selectionner la date du rendez-vous"));
+  gtk_widget_show (adherant_label64);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_label64, 112, 56);
+  gtk_widget_set_size_request (adherant_label64, 376, 40);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label64), TRUE);
+
+  adherant_spinbutton9_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
+  adherant_spinbutton9 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton9_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton9);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_spinbutton9, 96, 120);
+  gtk_widget_set_size_request (adherant_spinbutton9, 60, 27);
+
+  adherant_spinbutton10_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
+  adherant_spinbutton10 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton10_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton10);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_spinbutton10, 264, 120);
+  gtk_widget_set_size_request (adherant_spinbutton10, 60, 27);
+
+  adherant_spinbutton11_adj = gtk_adjustment_new (2018, 2018, 2030, 1, 10, 10);
+  adherant_spinbutton11 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton11_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton11);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_spinbutton11, 448, 120);
+  gtk_widget_set_size_request (adherant_spinbutton11, 60, 27);
+
+  adherant_label63 = gtk_label_new (_("rendez-vous et disponibilite des kinesitherapeutes"));
+  gtk_widget_show (adherant_label63);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_label63, 0, 8);
+  gtk_widget_set_size_request (adherant_label63, 632, 16);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label63), TRUE);
+
+  adherant_comboboxentry3 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (adherant_comboboxentry3);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_comboboxentry3, 16, 192);
+  gtk_widget_set_size_request (adherant_comboboxentry3, 229, 29);
+
+  adherant_button20 = gtk_button_new ();
+  gtk_widget_show (adherant_button20);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_button20, 352, 184);
+  gtk_widget_set_size_request (adherant_button20, 136, 32);
+
+  alignment20 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment20);
+  gtk_container_add (GTK_CONTAINER (adherant_button20), alignment20);
+
+  hbox20 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox20);
+  gtk_container_add (GTK_CONTAINER (alignment20), hbox20);
+
+  image22 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image22);
+  gtk_box_pack_start (GTK_BOX (hbox20), image22, FALSE, FALSE, 0);
+
+  label65 = gtk_label_new_with_mnemonic (_("valider"));
+  gtk_widget_show (label65);
+  gtk_box_pack_start (GTK_BOX (hbox20), label65, FALSE, FALSE, 0);
+
+  adherant_button21 = gtk_button_new ();
+  gtk_widget_show (adherant_button21);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_button21, 176, 264);
+  gtk_widget_set_size_request (adherant_button21, 248, 32);
+
+  alignment21 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment21);
+  gtk_container_add (GTK_CONTAINER (adherant_button21), alignment21);
+
+  hbox21 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox21);
+  gtk_container_add (GTK_CONTAINER (alignment21), hbox21);
+
+  image23 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image23);
+  gtk_box_pack_start (GTK_BOX (hbox21), image23, FALSE, FALSE, 0);
+
+  label66 = gtk_label_new_with_mnemonic (_("prendre un rendez-vous"));
+  gtk_widget_show (label66);
+  gtk_box_pack_start (GTK_BOX (hbox21), label66, FALSE, FALSE, 0);
+
+  adherant_button22 = gtk_button_new ();
+  gtk_widget_show (adherant_button22);
+  gtk_fixed_put (GTK_FIXED (fixed15), adherant_button22, 40, 328);
+  gtk_widget_set_size_request (adherant_button22, 130, 29);
+
+  alignment22 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment22);
+  gtk_container_add (GTK_CONTAINER (adherant_button22), alignment22);
+
+  hbox22 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox22);
+  gtk_container_add (GTK_CONTAINER (alignment22), hbox22);
+
+  image24 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image24);
+  gtk_box_pack_start (GTK_BOX (hbox22), image24, FALSE, FALSE, 0);
+
+  label67 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label67);
+  gtk_box_pack_start (GTK_BOX (hbox22), label67, FALSE, FALSE, 0);
+
+  rdv_kine = gtk_label_new (_("rdv_kine"));
+  gtk_widget_show (rdv_kine);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 3), rdv_kine);
+
+  fixed16 = gtk_fixed_new ();
+  gtk_widget_show (fixed16);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed16);
+
+  adherant_spinbutton12_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
+  adherant_spinbutton12 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton12_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton12);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_spinbutton12, 80, 128);
+  gtk_widget_set_size_request (adherant_spinbutton12, 60, 27);
+
+  adherant_spinbutton13_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
+  adherant_spinbutton13 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton13_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton13);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_spinbutton13, 264, 128);
+  gtk_widget_set_size_request (adherant_spinbutton13, 60, 27);
+
+  adherant_spinbutton14_adj = gtk_adjustment_new (2018, 2018, 2030, 1, 10, 10);
+  adherant_spinbutton14 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton14_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton14);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_spinbutton14, 456, 128);
+  gtk_widget_set_size_request (adherant_spinbutton14, 60, 27);
+
+  adherant_label68 = gtk_label_new (_("rendez-vous et disponibilite des dieteticiens"));
+  gtk_widget_show (adherant_label68);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_label68, 0, 8);
+  gtk_widget_set_size_request (adherant_label68, 616, 16);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label68), TRUE);
+
+  adherant_label69 = gtk_label_new (_("selectionner la date du rendez-vous "));
+  gtk_widget_show (adherant_label69);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_label69, 120, 56);
+  gtk_widget_set_size_request (adherant_label69, 352, 40);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label69), TRUE);
+
+  adherant_comboboxentry4 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (adherant_comboboxentry4);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_comboboxentry4, 32, 208);
+  gtk_widget_set_size_request (adherant_comboboxentry4, 221, 29);
+
+  adherant_button23 = gtk_button_new ();
+  gtk_widget_show (adherant_button23);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_button23, 384, 208);
+  gtk_widget_set_size_request (adherant_button23, 106, 29);
+
+  alignment23 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment23);
+  gtk_container_add (GTK_CONTAINER (adherant_button23), alignment23);
+
+  hbox23 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox23);
+  gtk_container_add (GTK_CONTAINER (alignment23), hbox23);
+
+  image25 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image25);
+  gtk_box_pack_start (GTK_BOX (hbox23), image25, FALSE, FALSE, 0);
+
+  label70 = gtk_label_new_with_mnemonic (_("valider"));
+  gtk_widget_show (label70);
+  gtk_box_pack_start (GTK_BOX (hbox23), label70, FALSE, FALSE, 0);
+
+  adherant_button24 = gtk_button_new ();
+  gtk_widget_show (adherant_button24);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_button24, 176, 272);
+  gtk_widget_set_size_request (adherant_button24, 248, 40);
+
+  alignment24 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment24);
+  gtk_container_add (GTK_CONTAINER (adherant_button24), alignment24);
+
+  hbox24 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox24);
+  gtk_container_add (GTK_CONTAINER (alignment24), hbox24);
+
+  image26 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image26);
+  gtk_box_pack_start (GTK_BOX (hbox24), image26, FALSE, FALSE, 0);
+
+  label71 = gtk_label_new_with_mnemonic (_("prendre rendez-vous"));
+  gtk_widget_show (label71);
+  gtk_box_pack_start (GTK_BOX (hbox24), label71, FALSE, FALSE, 0);
+
+  adherant_button25 = gtk_button_new ();
+  gtk_widget_show (adherant_button25);
+  gtk_fixed_put (GTK_FIXED (fixed16), adherant_button25, 48, 328);
+  gtk_widget_set_size_request (adherant_button25, 98, 29);
+
+  alignment25 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment25);
+  gtk_container_add (GTK_CONTAINER (adherant_button25), alignment25);
+
+  hbox25 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox25);
+  gtk_container_add (GTK_CONTAINER (alignment25), hbox25);
+
+  image27 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image27);
+  gtk_box_pack_start (GTK_BOX (hbox25), image27, FALSE, FALSE, 0);
+
+  label72 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label72);
+  gtk_box_pack_start (GTK_BOX (hbox25), label72, FALSE, FALSE, 0);
+
+  rdv_diet = gtk_label_new (_("rdv_diet"));
+  gtk_widget_show (rdv_diet);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 4), rdv_diet);
+
+  fixed17 = gtk_fixed_new ();
+  gtk_widget_show (fixed17);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed17);
+
+  adherant_spinbutton15_adj = gtk_adjustment_new (1, 1, 31, 1, 10, 10);
+  adherant_spinbutton15 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton15_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton15);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_spinbutton15, 88, 128);
+  gtk_widget_set_size_request (adherant_spinbutton15, 60, 27);
+
+  adherant_spinbutton16_adj = gtk_adjustment_new (1, 1, 12, 1, 10, 10);
+  adherant_spinbutton16 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton16_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton16);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_spinbutton16, 272, 128);
+  gtk_widget_set_size_request (adherant_spinbutton16, 60, 27);
+
+  adherant_spinbutton17_adj = gtk_adjustment_new (2018, 2018, 2018, 1, 10, 10);
+  adherant_spinbutton17 = gtk_spin_button_new (GTK_ADJUSTMENT (adherant_spinbutton17_adj), 1, 0);
+  gtk_widget_show (adherant_spinbutton17);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_spinbutton17, 464, 128);
+  gtk_widget_set_size_request (adherant_spinbutton17, 60, 27);
+
+  adherant_label73 = gtk_label_new (_("rendez-vous et disponibilite des coachs"));
+  gtk_widget_show (adherant_label73);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_label73, -8, 9);
+  gtk_widget_set_size_request (adherant_label73, 632, 16);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label73), TRUE);
+
+  adherant_label74 = gtk_label_new (_("selectionner la date du rendez-vous"));
+  gtk_widget_show (adherant_label74);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_label74, 160, 56);
+  gtk_widget_set_size_request (adherant_label74, 296, 64);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label74), TRUE);
+
+  adherant_comboboxentry5 = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (adherant_comboboxentry5);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_comboboxentry5, 8, 200);
+  gtk_widget_set_size_request (adherant_comboboxentry5, 237, 29);
+
+  adherant_button26 = gtk_button_new ();
+  gtk_widget_show (adherant_button26);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_button26, 352, 192);
+  gtk_widget_set_size_request (adherant_button26, 130, 29);
+
+  alignment26 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment26);
+  gtk_container_add (GTK_CONTAINER (adherant_button26), alignment26);
+
+  hbox26 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox26);
+  gtk_container_add (GTK_CONTAINER (alignment26), hbox26);
+
+  image28 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image28);
+  gtk_box_pack_start (GTK_BOX (hbox26), image28, FALSE, FALSE, 0);
+
+  label75 = gtk_label_new_with_mnemonic (_("valider"));
+  gtk_widget_show (label75);
+  gtk_box_pack_start (GTK_BOX (hbox26), label75, FALSE, FALSE, 0);
+
+  adherant_button27 = gtk_button_new ();
+  gtk_widget_show (adherant_button27);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_button27, 160, 264);
+  gtk_widget_set_size_request (adherant_button27, 264, 32);
+
+  alignment27 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment27);
+  gtk_container_add (GTK_CONTAINER (adherant_button27), alignment27);
+
+  hbox27 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox27);
+  gtk_container_add (GTK_CONTAINER (alignment27), hbox27);
+
+  image29 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image29);
+  gtk_box_pack_start (GTK_BOX (hbox27), image29, FALSE, FALSE, 0);
+
+  label76 = gtk_label_new_with_mnemonic (_("prendre un rendez-vous"));
+  gtk_widget_show (label76);
+  gtk_box_pack_start (GTK_BOX (hbox27), label76, FALSE, FALSE, 0);
+
+  adherant_button28 = gtk_button_new ();
+  gtk_widget_show (adherant_button28);
+  gtk_fixed_put (GTK_FIXED (fixed17), adherant_button28, 48, 328);
+  gtk_widget_set_size_request (adherant_button28, 74, 29);
+
+  alignment28 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment28);
+  gtk_container_add (GTK_CONTAINER (adherant_button28), alignment28);
+
+  hbox28 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox28);
+  gtk_container_add (GTK_CONTAINER (alignment28), hbox28);
+
+  image30 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image30);
+  gtk_box_pack_start (GTK_BOX (hbox28), image30, FALSE, FALSE, 0);
+
+  label77 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label77);
+  gtk_box_pack_start (GTK_BOX (hbox28), label77, FALSE, FALSE, 0);
+
+  rdv_coach = gtk_label_new (_("rdv_coach"));
+  gtk_widget_show (rdv_coach);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 5), rdv_coach);
+
+  fixed18 = gtk_fixed_new ();
+  gtk_widget_show (fixed18);
+  gtk_container_add (GTK_CONTAINER (notebook1), fixed18);
+
+  adherant_label80 = gtk_label_new (_("Le planning des cours de la semaine:"));
+  gtk_widget_show (adherant_label80);
+  gtk_fixed_put (GTK_FIXED (fixed18), adherant_label80, -8, 8);
+  gtk_widget_set_size_request (adherant_label80, 704, 16);
+  gtk_label_set_use_markup (GTK_LABEL (adherant_label80), TRUE);
+
+  adherant_treeview1 = gtk_tree_view_new ();
+  gtk_widget_show (adherant_treeview1);
+  gtk_fixed_put (GTK_FIXED (fixed18), adherant_treeview1, 128, 40);
+  gtk_widget_set_size_request (adherant_treeview1, 456, 232);
+
+  adherant_button29 = gtk_button_new ();
+  gtk_widget_show (adherant_button29);
+  gtk_fixed_put (GTK_FIXED (fixed18), adherant_button29, 24, 320);
+  gtk_widget_set_size_request (adherant_button29, 106, 29);
+
+  alignment29 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment29);
+  gtk_container_add (GTK_CONTAINER (adherant_button29), alignment29);
+
+  hbox29 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox29);
+  gtk_container_add (GTK_CONTAINER (alignment29), hbox29);
+
+  image31 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image31);
+  gtk_box_pack_start (GTK_BOX (hbox29), image31, FALSE, FALSE, 0);
+
+  label82 = gtk_label_new_with_mnemonic (_("back"));
+  gtk_widget_show (label82);
+  gtk_box_pack_start (GTK_BOX (hbox29), label82, FALSE, FALSE, 0);
+
+  planning_cours = gtk_label_new (_("planning_cours"));
+  gtk_widget_show (planning_cours);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook1), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook1), 6), planning_cours);
+
+  g_signal_connect ((gpointer) adherant_comboboxentry1, "changed",
+                    G_CALLBACK (on_adherant_comboboxentry1_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button13, "clicked",
+                    G_CALLBACK (on_adherant_button13_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button14, "clicked",
+                    G_CALLBACK (on_adherant_button14_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_entry11, "delete_text",
+                    G_CALLBACK (on_adherant_entry11_delete_text),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_entry11, "insert_text",
+                    G_CALLBACK (on_adherant_entry11_insert_text),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_entry12, "insert_text",
+                    G_CALLBACK (on_adherant_entry12_insert_text),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_entry12, "delete_text",
+                    G_CALLBACK (on_adherant_entry12_delete_text),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton4, "changed",
+                    G_CALLBACK (on_adherant_spinbutton4_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton5, "changed",
+                    G_CALLBACK (on_adherant_spinbutton5_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button15, "clicked",
+                    G_CALLBACK (on_adherant_button15_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button16, "clicked",
+                    G_CALLBACK (on_button16_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton6, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton6_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton7, "change_value",
+                    G_CALLBACK (on_spinbutton7_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton8, "change_value",
+                    G_CALLBACK (on_spinbutton8_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_comboboxentry2, "changed",
+                    G_CALLBACK (on_comboboxentry2_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button17, "clicked",
+                    G_CALLBACK (on_adherant_button17_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) badherant_button18, "clicked",
+                    G_CALLBACK (on_badherant_utton18_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button19, "clicked",
+                    G_CALLBACK (on_button19_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton9, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton9_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton10, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton10_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton11, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton11_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_comboboxentry3, "changed",
+                    G_CALLBACK (on_comboboxentry3_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button20, "clicked",
+                    G_CALLBACK (on_adherant_button20_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button21, "clicked",
+                    G_CALLBACK (on_button21_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button22, "clicked",
+                    G_CALLBACK (on_adherant_button22_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton12, "change_value",
+                    G_CALLBACK (on_spinbutton12_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton13, "change_value",
+                    G_CALLBACK (on_spinbutton13_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton14, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton14_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_comboboxentry4, "changed",
+                    G_CALLBACK (on_comboboxentry4_changed),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button23, "clicked",
+                    G_CALLBACK (on_adherant_button23_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button24, "clicked",
+                    G_CALLBACK (on_adherant_button24_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button25, "clicked",
+                    G_CALLBACK (on_adherant_button25_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton15, "change_value",
+                    G_CALLBACK (on_spinbutton15_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton16, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton16_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_spinbutton17, "change_value",
+                    G_CALLBACK (on_adherant_spinbutton17_change_value),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button26, "clicked",
+                    G_CALLBACK (on_button26_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button27, "clicked",
+                    G_CALLBACK (on_adherant_button27_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button28, "clicked",
+                    G_CALLBACK (on_button28_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) adherant_button29, "clicked",
+                    G_CALLBACK (on_adherant_button29_clicked),
+                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (window4, window4, "window4");
   GLADE_HOOKUP_OBJECT (window4, fixed4, "fixed4");
-  GLADE_HOOKUP_OBJECT (window4, label5, "label5");
+  GLADE_HOOKUP_OBJECT (window4, notebook1, "notebook1");
+  GLADE_HOOKUP_OBJECT (window4, fixed12, "fixed12");
+  GLADE_HOOKUP_OBJECT (window4, espace_adherants, "espace_adherants");
+  GLADE_HOOKUP_OBJECT (window4, adherant_comboboxentry1, "adherant_comboboxentry1");
+  GLADE_HOOKUP_OBJECT (window4, rdv_adherant, "rdv_adherant");
+  GLADE_HOOKUP_OBJECT (window4, consulter_cours_adherant, "consulter_cours_adherant");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button12, "adherant_button12");
+  GLADE_HOOKUP_OBJECT (window4, alignment12, "alignment12");
+  GLADE_HOOKUP_OBJECT (window4, hbox12, "hbox12");
+  GLADE_HOOKUP_OBJECT (window4, image14, "image14");
+  GLADE_HOOKUP_OBJECT (window4, label48, "label48");
+  GLADE_HOOKUP_OBJECT (window4, inf_per_aderant, "inf_per_aderant");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button13, "adherant_button13");
+  GLADE_HOOKUP_OBJECT (window4, alignment13, "alignment13");
+  GLADE_HOOKUP_OBJECT (window4, hbox13, "hbox13");
+  GLADE_HOOKUP_OBJECT (window4, image15, "image15");
+  GLADE_HOOKUP_OBJECT (window4, label50, "label50");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button14, "adherant_button14");
+  GLADE_HOOKUP_OBJECT (window4, alignment14, "alignment14");
+  GLADE_HOOKUP_OBJECT (window4, hbox14, "hbox14");
+  GLADE_HOOKUP_OBJECT (window4, image16, "image16");
+  GLADE_HOOKUP_OBJECT (window4, label51, "label51");
+  GLADE_HOOKUP_OBJECT (window4, espace_adherants, "espace_adherants");
+  GLADE_HOOKUP_OBJECT (window4, fixed13, "fixed13");
+  GLADE_HOOKUP_OBJECT (window4, adherant_entry11, "adherant_entry11");
+  GLADE_HOOKUP_OBJECT (window4, adherant_entry12, "adherant_entry12");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton4, "adherant_spinbutton4");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton5, "adherant_spinbutton5");
+  GLADE_HOOKUP_OBJECT (window4, info_per, "info_per");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label53, "adherant_label53");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label54, "adherant_label54");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label55, "adherant_label55");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button15, "adherant_button15");
+  GLADE_HOOKUP_OBJECT (window4, alignment15, "alignment15");
+  GLADE_HOOKUP_OBJECT (window4, hbox15, "hbox15");
+  GLADE_HOOKUP_OBJECT (window4, image17, "image17");
+  GLADE_HOOKUP_OBJECT (window4, label56, "label56");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button16, "adherant_button16");
+  GLADE_HOOKUP_OBJECT (window4, alignment16, "alignment16");
+  GLADE_HOOKUP_OBJECT (window4, hbox16, "hbox16");
+  GLADE_HOOKUP_OBJECT (window4, image18, "image18");
+  GLADE_HOOKUP_OBJECT (window4, label57, "label57");
+  GLADE_HOOKUP_OBJECT (window4, informations_personnelles, "informations_personnelles");
+  GLADE_HOOKUP_OBJECT (window4, fixed14, "fixed14");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton6, "adherant_spinbutton6");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton7, "adherant_spinbutton7");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton8, "adherant_spinbutton8");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label58, "adherant_label58");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label59, "adherant_label59");
+  GLADE_HOOKUP_OBJECT (window4, adherant_comboboxentry2, "adherant_comboboxentry2");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button17, "adherant_button17");
+  GLADE_HOOKUP_OBJECT (window4, alignment17, "alignment17");
+  GLADE_HOOKUP_OBJECT (window4, hbox17, "hbox17");
+  GLADE_HOOKUP_OBJECT (window4, image19, "image19");
+  GLADE_HOOKUP_OBJECT (window4, label60, "label60");
+  GLADE_HOOKUP_OBJECT (window4, badherant_button18, "badherant_button18");
+  GLADE_HOOKUP_OBJECT (window4, alignment18, "alignment18");
+  GLADE_HOOKUP_OBJECT (window4, hbox18, "hbox18");
+  GLADE_HOOKUP_OBJECT (window4, image20, "image20");
+  GLADE_HOOKUP_OBJECT (window4, label61, "label61");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button19, "adherant_button19");
+  GLADE_HOOKUP_OBJECT (window4, alignment19, "alignment19");
+  GLADE_HOOKUP_OBJECT (window4, hbox19, "hbox19");
+  GLADE_HOOKUP_OBJECT (window4, image21, "image21");
+  GLADE_HOOKUP_OBJECT (window4, label62, "label62");
+  GLADE_HOOKUP_OBJECT (window4, rdv_med, "rdv_med");
+  GLADE_HOOKUP_OBJECT (window4, fixed15, "fixed15");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label64, "adherant_label64");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton9, "adherant_spinbutton9");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton10, "adherant_spinbutton10");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton11, "adherant_spinbutton11");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label63, "adherant_label63");
+  GLADE_HOOKUP_OBJECT (window4, adherant_comboboxentry3, "adherant_comboboxentry3");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button20, "adherant_button20");
+  GLADE_HOOKUP_OBJECT (window4, alignment20, "alignment20");
+  GLADE_HOOKUP_OBJECT (window4, hbox20, "hbox20");
+  GLADE_HOOKUP_OBJECT (window4, image22, "image22");
+  GLADE_HOOKUP_OBJECT (window4, label65, "label65");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button21, "adherant_button21");
+  GLADE_HOOKUP_OBJECT (window4, alignment21, "alignment21");
+  GLADE_HOOKUP_OBJECT (window4, hbox21, "hbox21");
+  GLADE_HOOKUP_OBJECT (window4, image23, "image23");
+  GLADE_HOOKUP_OBJECT (window4, label66, "label66");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button22, "adherant_button22");
+  GLADE_HOOKUP_OBJECT (window4, alignment22, "alignment22");
+  GLADE_HOOKUP_OBJECT (window4, hbox22, "hbox22");
+  GLADE_HOOKUP_OBJECT (window4, image24, "image24");
+  GLADE_HOOKUP_OBJECT (window4, label67, "label67");
+  GLADE_HOOKUP_OBJECT (window4, rdv_kine, "rdv_kine");
+  GLADE_HOOKUP_OBJECT (window4, fixed16, "fixed16");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton12, "adherant_spinbutton12");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton13, "adherant_spinbutton13");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton14, "adherant_spinbutton14");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label68, "adherant_label68");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label69, "adherant_label69");
+  GLADE_HOOKUP_OBJECT (window4, adherant_comboboxentry4, "adherant_comboboxentry4");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button23, "adherant_button23");
+  GLADE_HOOKUP_OBJECT (window4, alignment23, "alignment23");
+  GLADE_HOOKUP_OBJECT (window4, hbox23, "hbox23");
+  GLADE_HOOKUP_OBJECT (window4, image25, "image25");
+  GLADE_HOOKUP_OBJECT (window4, label70, "label70");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button24, "adherant_button24");
+  GLADE_HOOKUP_OBJECT (window4, alignment24, "alignment24");
+  GLADE_HOOKUP_OBJECT (window4, hbox24, "hbox24");
+  GLADE_HOOKUP_OBJECT (window4, image26, "image26");
+  GLADE_HOOKUP_OBJECT (window4, label71, "label71");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button25, "adherant_button25");
+  GLADE_HOOKUP_OBJECT (window4, alignment25, "alignment25");
+  GLADE_HOOKUP_OBJECT (window4, hbox25, "hbox25");
+  GLADE_HOOKUP_OBJECT (window4, image27, "image27");
+  GLADE_HOOKUP_OBJECT (window4, label72, "label72");
+  GLADE_HOOKUP_OBJECT (window4, rdv_diet, "rdv_diet");
+  GLADE_HOOKUP_OBJECT (window4, fixed17, "fixed17");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton15, "adherant_spinbutton15");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton16, "adherant_spinbutton16");
+  GLADE_HOOKUP_OBJECT (window4, adherant_spinbutton17, "adherant_spinbutton17");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label73, "adherant_label73");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label74, "adherant_label74");
+  GLADE_HOOKUP_OBJECT (window4, adherant_comboboxentry5, "adherant_comboboxentry5");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button26, "adherant_button26");
+  GLADE_HOOKUP_OBJECT (window4, alignment26, "alignment26");
+  GLADE_HOOKUP_OBJECT (window4, hbox26, "hbox26");
+  GLADE_HOOKUP_OBJECT (window4, image28, "image28");
+  GLADE_HOOKUP_OBJECT (window4, label75, "label75");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button27, "adherant_button27");
+  GLADE_HOOKUP_OBJECT (window4, alignment27, "alignment27");
+  GLADE_HOOKUP_OBJECT (window4, hbox27, "hbox27");
+  GLADE_HOOKUP_OBJECT (window4, image29, "image29");
+  GLADE_HOOKUP_OBJECT (window4, label76, "label76");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button28, "adherant_button28");
+  GLADE_HOOKUP_OBJECT (window4, alignment28, "alignment28");
+  GLADE_HOOKUP_OBJECT (window4, hbox28, "hbox28");
+  GLADE_HOOKUP_OBJECT (window4, image30, "image30");
+  GLADE_HOOKUP_OBJECT (window4, label77, "label77");
+  GLADE_HOOKUP_OBJECT (window4, rdv_coach, "rdv_coach");
+  GLADE_HOOKUP_OBJECT (window4, fixed18, "fixed18");
+  GLADE_HOOKUP_OBJECT (window4, adherant_label80, "adherant_label80");
+  GLADE_HOOKUP_OBJECT (window4, adherant_treeview1, "adherant_treeview1");
+  GLADE_HOOKUP_OBJECT (window4, adherant_button29, "adherant_button29");
+  GLADE_HOOKUP_OBJECT (window4, alignment29, "alignment29");
+  GLADE_HOOKUP_OBJECT (window4, hbox29, "hbox29");
+  GLADE_HOOKUP_OBJECT (window4, image31, "image31");
+  GLADE_HOOKUP_OBJECT (window4, label82, "label82");
+  GLADE_HOOKUP_OBJECT (window4, planning_cours, "planning_cours");
 
   return window4;
 }
