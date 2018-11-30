@@ -646,3 +646,67 @@ on_coach_saveemp_clicked               (GtkButton       *button,
 
 }
 
+
+void
+on_Nutritionniste_button13_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button14_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button16_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button15_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button18_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button12_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button17_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_Nutritionniste_button19_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+

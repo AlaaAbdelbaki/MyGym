@@ -173,25 +173,424 @@ create_window2 (void)
 {
   GtkWidget *window2;
   GtkWidget *fixed2;
-  GtkWidget *label3;
+  GtkWidget *Nutritionniste_notebook3;
+  GtkWidget *Nutritionniste_fixed23;
+  GtkWidget *Nutritionniste_label100;
+  GtkWidget *Nutritionniste_fixed24;
+  GtkWidget *Nutritionniste_label106;
+  GtkWidget *Nutritionniste_label107;
+  GtkWidget *Nutritionniste_label108;
+  GtkWidget *Nutritionniste_label109;
+  GtkWidget *Nutritionniste_label110;
+  GtkWidget *Nutritionniste_label111;
+  GtkWidget *Nutritionniste_label112;
+  GtkWidget *Nutritionniste_label123;
+  GtkWidget *Nutritionniste_label124;
+  GtkWidget *Nutritionniste_label113;
+  GtkWidget *Nutritionniste_label114;
+  GtkWidget *Nutritionniste_label132;
+  GtkWidget *Nutritionniste_fixed25;
+  GtkWidget *Nutritionniste_entry12;
+  GtkWidget *Nutritionniste_label116;
+  GtkWidget *Nutritionniste_button13;
+  GtkWidget *Nutritionniste_button14;
+  GtkWidget *Nutritionniste_button16;
+  GtkWidget *Nutritionniste_button15;
+  GtkWidget *Nutritionniste_label102;
+  GtkWidget *Nutritionniste_fixed26;
+  GtkWidget *Nutritionniste_entry18;
+  GtkWidget *Nutritionniste_label126;
+  GtkWidget *Nutritionniste_label127;
+  GtkWidget *Nutritionniste_label128;
+  GtkWidget *Nutritionniste_label129;
+  GtkWidget *Nutritionniste_label130;
+  GtkWidget *Nutritionniste_label131;
+  GtkWidget *Nutritionniste_button18;
+  GtkWidget *Nutritionniste_label103;
+  GtkWidget *Nutritionniste_fixed27;
+  GtkWidget *Nutritionniste_entry11;
+  GtkWidget *Nutritionniste_label115;
+  GtkWidget *Nutritionniste_button12;
+  GtkWidget *Nutritionniste_label104;
+  GtkWidget *Nutritionniste_fixed28;
+  GtkWidget *Nutritionniste_entry13;
+  GtkWidget *Nutritionniste_entry14;
+  GtkWidget *Nutritionniste_entry15;
+  GtkWidget *Nutritionniste_entry16;
+  GtkWidget *Nutritionniste_entry17;
+  GtkWidget *Nutritionniste_label122;
+  GtkWidget *Nutritionniste_label125;
+  GtkWidget *Nutritionniste_label121;
+  GtkWidget *label120;
+  GtkWidget *Nutritionniste_label119;
+  GtkWidget *Nutritionniste_label118;
+  GtkWidget *Nutritionniste_label117;
+  GtkWidget *Nutritionniste_button17;
+  GtkWidget *Nutritionniste_button19;
+  GtkWidget *Nutritionniste_label105;
 
   window2 = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window2), _("window2"));
+  gtk_window_set_title (GTK_WINDOW (window2), _("Espace Nutritonniste"));
   gtk_window_set_position (GTK_WINDOW (window2), GTK_WIN_POS_CENTER);
 
   fixed2 = gtk_fixed_new ();
   gtk_widget_show (fixed2);
   gtk_container_add (GTK_CONTAINER (window2), fixed2);
 
-  label3 = gtk_label_new (_("bienvenue dans l'espace nutritionniste"));
-  gtk_widget_show (label3);
-  gtk_fixed_put (GTK_FIXED (fixed2), label3, 88, 104);
-  gtk_widget_set_size_request (label3, 232, 48);
+  Nutritionniste_notebook3 = gtk_notebook_new ();
+  gtk_widget_show (Nutritionniste_notebook3);
+  gtk_fixed_put (GTK_FIXED (fixed2), Nutritionniste_notebook3, 0, 0);
+  gtk_widget_set_size_request (Nutritionniste_notebook3, 744, 576);
+
+  Nutritionniste_fixed23 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed23);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed23);
+
+  Nutritionniste_label100 = gtk_label_new (_("Agenda"));
+  gtk_widget_show (Nutritionniste_label100);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 0), Nutritionniste_label100);
+
+  Nutritionniste_fixed24 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed24);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed24);
+
+  Nutritionniste_label106 = gtk_label_new (_("NOM:"));
+  gtk_widget_show (Nutritionniste_label106);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label106, 104, 56);
+  gtk_widget_set_size_request (Nutritionniste_label106, 56, 24);
+
+  Nutritionniste_label107 = gtk_label_new (_("label107"));
+  gtk_widget_show (Nutritionniste_label107);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label107, 16, 80);
+  gtk_widget_set_size_request (Nutritionniste_label107, 232, 24);
+
+  Nutritionniste_label108 = gtk_label_new (_("Prenoms:"));
+  gtk_widget_show (Nutritionniste_label108);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label108, 88, 112);
+  gtk_widget_set_size_request (Nutritionniste_label108, 88, 24);
+
+  Nutritionniste_label109 = gtk_label_new (_("label109"));
+  gtk_widget_show (Nutritionniste_label109);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label109, 8, 136);
+  gtk_widget_set_size_request (Nutritionniste_label109, 248, 24);
+
+  Nutritionniste_label110 = gtk_label_new (_("Specialit\303\251: Nutritionniste"));
+  gtk_widget_show (Nutritionniste_label110);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label110, 56, 168);
+  gtk_widget_set_size_request (Nutritionniste_label110, 168, 24);
+
+  Nutritionniste_label111 = gtk_label_new (_("Num\303\251ro de T\303\251l\303\251phone:"));
+  gtk_widget_show (Nutritionniste_label111);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label111, 56, 200);
+  gtk_widget_set_size_request (Nutritionniste_label111, 168, 24);
+
+  Nutritionniste_label112 = gtk_label_new (_("label112"));
+  gtk_widget_show (Nutritionniste_label112);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label112, 48, 224);
+  gtk_widget_set_size_request (Nutritionniste_label112, 176, 24);
+
+  Nutritionniste_label123 = gtk_label_new (_("Email:"));
+  gtk_widget_show (Nutritionniste_label123);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label123, 104, 264);
+  gtk_widget_set_size_request (Nutritionniste_label123, 51, 16);
+
+  Nutritionniste_label124 = gtk_label_new (_("label124"));
+  gtk_widget_show (Nutritionniste_label124);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label124, 0, 280);
+  gtk_widget_set_size_request (Nutritionniste_label124, 264, 24);
+
+  Nutritionniste_label113 = gtk_label_new (_("A propos:"));
+  gtk_widget_show (Nutritionniste_label113);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label113, 96, 320);
+  gtk_widget_set_size_request (Nutritionniste_label113, 80, 24);
+
+  Nutritionniste_label114 = gtk_label_new (_("label114"));
+  gtk_widget_show (Nutritionniste_label114);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed24), Nutritionniste_label114, 88, 344);
+  gtk_widget_set_size_request (Nutritionniste_label114, 88, 24);
+
+  Nutritionniste_label132 = gtk_label_new (_("Profil"));
+  gtk_widget_show (Nutritionniste_label132);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 1), Nutritionniste_label132);
+
+  Nutritionniste_fixed25 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed25);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed25);
+
+  Nutritionniste_entry12 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry12);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_entry12, 248, 88);
+  gtk_widget_set_size_request (Nutritionniste_entry12, 200, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry12), 8226);
+
+  Nutritionniste_label116 = gtk_label_new (_("Nom:"));
+  gtk_widget_show (Nutritionniste_label116);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_label116, 184, 88);
+  gtk_widget_set_size_request (Nutritionniste_label116, 64, 24);
+
+  Nutritionniste_button13 = gtk_button_new_with_mnemonic (_("Afficher"));
+  gtk_widget_show (Nutritionniste_button13);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_button13, 232, 176);
+  gtk_widget_set_size_request (Nutritionniste_button13, 96, 32);
+
+  Nutritionniste_button14 = gtk_button_new_with_mnemonic (_("Modifier"));
+  gtk_widget_show (Nutritionniste_button14);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_button14, 376, 176);
+  gtk_widget_set_size_request (Nutritionniste_button14, 96, 32);
+
+  Nutritionniste_button16 = gtk_button_new_with_mnemonic (_("Supprimer"));
+  gtk_widget_show (Nutritionniste_button16);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_button16, 312, 240);
+  gtk_widget_set_size_request (Nutritionniste_button16, 88, 32);
+
+  Nutritionniste_button15 = gtk_button_new_with_mnemonic (_("Ajouter+"));
+  gtk_widget_show (Nutritionniste_button15);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed25), Nutritionniste_button15, 304, 16);
+  gtk_widget_set_size_request (Nutritionniste_button15, 80, 32);
+
+  Nutritionniste_label102 = gtk_label_new (_("Fiches Medicales"));
+  gtk_widget_show (Nutritionniste_label102);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 2), Nutritionniste_label102);
+
+  Nutritionniste_fixed26 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed26);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed26);
+
+  Nutritionniste_entry18 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry18);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_entry18, 312, 64);
+  gtk_widget_set_size_request (Nutritionniste_entry18, 200, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry18), 8226);
+
+  Nutritionniste_label126 = gtk_label_new (_("Saisir le nom d'utilisateur:"));
+  gtk_widget_show (Nutritionniste_label126);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label126, 144, 64);
+  gtk_widget_set_size_request (Nutritionniste_label126, 168, 24);
+
+  Nutritionniste_label127 = gtk_label_new (_("Nom:"));
+  gtk_widget_show (Nutritionniste_label127);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label127, 128, 184);
+  gtk_widget_set_size_request (Nutritionniste_label127, 224, 24);
+
+  Nutritionniste_label128 = gtk_label_new (_("Pr\303\251noms:"));
+  gtk_widget_show (Nutritionniste_label128);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label128, 96, 216);
+  gtk_widget_set_size_request (Nutritionniste_label128, 288, 24);
+
+  Nutritionniste_label129 = gtk_label_new (_("Taille:"));
+  gtk_widget_show (Nutritionniste_label129);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label129, 160, 248);
+  gtk_widget_set_size_request (Nutritionniste_label129, 152, 24);
+
+  Nutritionniste_label130 = gtk_label_new (_("Poids:"));
+  gtk_widget_show (Nutritionniste_label130);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label130, 160, 280);
+  gtk_widget_set_size_request (Nutritionniste_label130, 152, 24);
+
+  Nutritionniste_label131 = gtk_label_new (_("Email:"));
+  gtk_widget_show (Nutritionniste_label131);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_label131, 72, 304);
+  gtk_widget_set_size_request (Nutritionniste_label131, 328, 32);
+
+  Nutritionniste_button18 = gtk_button_new_with_mnemonic (_("Afficher profil"));
+  gtk_widget_show (Nutritionniste_button18);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed26), Nutritionniste_button18, 344, 128);
+  gtk_widget_set_size_request (Nutritionniste_button18, 120, 24);
+
+  Nutritionniste_label103 = gtk_label_new (_("Profils adherents"));
+  gtk_widget_show (Nutritionniste_label103);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 3), Nutritionniste_label103);
+
+  Nutritionniste_fixed27 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed27);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed27);
+
+  Nutritionniste_entry11 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry11);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed27), Nutritionniste_entry11, 176, 56);
+  gtk_widget_set_size_request (Nutritionniste_entry11, 392, 192);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry11), 8226);
+
+  Nutritionniste_label115 = gtk_label_new (_("Rapport:"));
+  gtk_widget_show (Nutritionniste_label115);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed27), Nutritionniste_label115, 112, 56);
+  gtk_widget_set_size_request (Nutritionniste_label115, 64, 24);
+
+  Nutritionniste_button12 = gtk_button_new_with_mnemonic (_("Envoyer"));
+  gtk_widget_show (Nutritionniste_button12);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed27), Nutritionniste_button12, 344, 280);
+  gtk_widget_set_size_request (Nutritionniste_button12, 66, 26);
+
+  Nutritionniste_label104 = gtk_label_new (_("Envoyer rapport"));
+  gtk_widget_show (Nutritionniste_label104);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 4), Nutritionniste_label104);
+
+  Nutritionniste_fixed28 = gtk_fixed_new ();
+  gtk_widget_show (Nutritionniste_fixed28);
+  gtk_container_add (GTK_CONTAINER (Nutritionniste_notebook3), Nutritionniste_fixed28);
+
+  Nutritionniste_entry13 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry13);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_entry13, 264, 208);
+  gtk_widget_set_size_request (Nutritionniste_entry13, 176, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry13), 8226);
+
+  Nutritionniste_entry14 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry14);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_entry14, 256, 248);
+  gtk_widget_set_size_request (Nutritionniste_entry14, 256, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry14), 8226);
+
+  Nutritionniste_entry15 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry15);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_entry15, 256, 288);
+  gtk_widget_set_size_request (Nutritionniste_entry15, 160, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry15), 8226);
+
+  Nutritionniste_entry16 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry16);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_entry16, 256, 368);
+  gtk_widget_set_size_request (Nutritionniste_entry16, 296, 128);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry16), 8226);
+
+  Nutritionniste_entry17 = gtk_entry_new ();
+  gtk_widget_show (Nutritionniste_entry17);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_entry17, 256, 328);
+  gtk_widget_set_size_request (Nutritionniste_entry17, 248, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (Nutritionniste_entry17), 8226);
+
+  Nutritionniste_label122 = gtk_label_new (_("A propos:"));
+  gtk_widget_show (Nutritionniste_label122);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label122, 176, 368);
+  gtk_widget_set_size_request (Nutritionniste_label122, 80, 24);
+
+  Nutritionniste_label125 = gtk_label_new (_("Email:"));
+  gtk_widget_show (Nutritionniste_label125);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label125, 200, 328);
+  gtk_widget_set_size_request (Nutritionniste_label125, 51, 16);
+
+  Nutritionniste_label121 = gtk_label_new (_("Numero de T\303\251l\303\251phone:"));
+  gtk_widget_show (Nutritionniste_label121);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label121, 104, 288);
+  gtk_widget_set_size_request (Nutritionniste_label121, 155, 24);
+
+  label120 = gtk_label_new (_("Pr\303\251noms:"));
+  gtk_widget_show (label120);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), label120, 184, 248);
+  gtk_widget_set_size_request (label120, 72, 24);
+
+  Nutritionniste_label119 = gtk_label_new (_("NOM:"));
+  gtk_widget_show (Nutritionniste_label119);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label119, 200, 208);
+  gtk_widget_set_size_request (Nutritionniste_label119, 64, 24);
+
+  Nutritionniste_label118 = gtk_label_new (_("Profil"));
+  gtk_widget_show (Nutritionniste_label118);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label118, 288, 160);
+  gtk_widget_set_size_request (Nutritionniste_label118, 136, 32);
+
+  Nutritionniste_label117 = gtk_label_new (_("Agenda"));
+  gtk_widget_show (Nutritionniste_label117);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_label117, 296, 0);
+  gtk_widget_set_size_request (Nutritionniste_label117, 136, 32);
+
+  Nutritionniste_button17 = gtk_button_new_with_mnemonic (_("Enregistrer"));
+  gtk_widget_show (Nutritionniste_button17);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_button17, 592, 456);
+  gtk_widget_set_size_request (Nutritionniste_button17, 96, 32);
+
+  Nutritionniste_button19 = gtk_button_new_with_mnemonic (_("Enregistrer"));
+  gtk_widget_show (Nutritionniste_button19);
+  gtk_fixed_put (GTK_FIXED (Nutritionniste_fixed28), Nutritionniste_button19, 616, 128);
+  gtk_widget_set_size_request (Nutritionniste_button19, 80, 32);
+
+  Nutritionniste_label105 = gtk_label_new (_("Apporter Modifications"));
+  gtk_widget_show (Nutritionniste_label105);
+  gtk_notebook_set_tab_label (GTK_NOTEBOOK (Nutritionniste_notebook3), gtk_notebook_get_nth_page (GTK_NOTEBOOK (Nutritionniste_notebook3), 5), Nutritionniste_label105);
+
+  g_signal_connect ((gpointer) Nutritionniste_button13, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button13_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button14, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button14_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button16, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button16_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button15, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button15_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button18, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button18_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button12, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button12_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button17, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button17_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) Nutritionniste_button19, "clicked",
+                    G_CALLBACK (on_Nutritionniste_button19_clicked),
+                    NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (window2, window2, "window2");
   GLADE_HOOKUP_OBJECT (window2, fixed2, "fixed2");
-  GLADE_HOOKUP_OBJECT (window2, label3, "label3");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_notebook3, "Nutritionniste_notebook3");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed23, "Nutritionniste_fixed23");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label100, "Nutritionniste_label100");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed24, "Nutritionniste_fixed24");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label106, "Nutritionniste_label106");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label107, "Nutritionniste_label107");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label108, "Nutritionniste_label108");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label109, "Nutritionniste_label109");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label110, "Nutritionniste_label110");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label111, "Nutritionniste_label111");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label112, "Nutritionniste_label112");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label123, "Nutritionniste_label123");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label124, "Nutritionniste_label124");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label113, "Nutritionniste_label113");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label114, "Nutritionniste_label114");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label132, "Nutritionniste_label132");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed25, "Nutritionniste_fixed25");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry12, "Nutritionniste_entry12");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label116, "Nutritionniste_label116");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button13, "Nutritionniste_button13");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button14, "Nutritionniste_button14");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button16, "Nutritionniste_button16");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button15, "Nutritionniste_button15");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label102, "Nutritionniste_label102");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed26, "Nutritionniste_fixed26");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry18, "Nutritionniste_entry18");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label126, "Nutritionniste_label126");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label127, "Nutritionniste_label127");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label128, "Nutritionniste_label128");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label129, "Nutritionniste_label129");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label130, "Nutritionniste_label130");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label131, "Nutritionniste_label131");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button18, "Nutritionniste_button18");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label103, "Nutritionniste_label103");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed27, "Nutritionniste_fixed27");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry11, "Nutritionniste_entry11");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label115, "Nutritionniste_label115");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button12, "Nutritionniste_button12");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label104, "Nutritionniste_label104");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_fixed28, "Nutritionniste_fixed28");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry13, "Nutritionniste_entry13");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry14, "Nutritionniste_entry14");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry15, "Nutritionniste_entry15");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry16, "Nutritionniste_entry16");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_entry17, "Nutritionniste_entry17");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label122, "Nutritionniste_label122");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label125, "Nutritionniste_label125");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label121, "Nutritionniste_label121");
+  GLADE_HOOKUP_OBJECT (window2, label120, "label120");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label119, "Nutritionniste_label119");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label118, "Nutritionniste_label118");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label117, "Nutritionniste_label117");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button17, "Nutritionniste_button17");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_button19, "Nutritionniste_button19");
+  GLADE_HOOKUP_OBJECT (window2, Nutritionniste_label105, "Nutritionniste_label105");
 
   return window2;
 }
