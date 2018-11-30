@@ -222,3 +222,15 @@ on_button28_clicked                    (GtkButton       *button,
 void
 on_adherant_button29_clicked           (GtkButton       *button,
                                         gpointer         user_data);
+
+void
+on_coach_saveprof_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_coach_valider_clicked               (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_coach_save_clicked                  (GtkButton       *button,
+                                        gpointer         user_data);

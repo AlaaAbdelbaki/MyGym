@@ -30,8 +30,7 @@ main (int argc, char *argv[])
   gtk_set_locale ();
   gtk_init (&argc, &argv);
 
-  add_pixmap_directory ("/home/anas/Projets/projet1/pixmaps");
-
+  add_pixmap_directory ("../pixmaps");
 
   /*
    * The following code was added by Glade to create one of each component
