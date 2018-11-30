@@ -766,3 +766,19 @@ on_kine_button19_clicked               (GtkButton       *button,
 
 }
 
+
+void
+on_kine_quit1_clicked                  (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_button20_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
