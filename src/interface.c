@@ -523,7 +523,7 @@ create_window3 (void)
 
   coach_saveemp = gtk_button_new ();
   gtk_widget_show (coach_saveemp);
-  gtk_fixed_put (GTK_FIXED (fixed20), coach_saveemp, 360, 416);
+  gtk_fixed_put (GTK_FIXED (fixed20), coach_saveemp, 352, 416);
   gtk_widget_set_size_request (coach_saveemp, 136, 29);
 
   alignment33 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -569,7 +569,7 @@ create_window3 (void)
   coach_valider = gtk_button_new ();
   gtk_widget_show (coach_valider);
   gtk_fixed_put (GTK_FIXED (fixed21), coach_valider, 656, 64);
-  gtk_widget_set_size_request (coach_valider, 74, 29);
+  gtk_widget_set_size_request (coach_valider, 88, 29);
 
   alignment31 = gtk_alignment_new (0.5, 0.5, 0, 0);
   gtk_widget_show (alignment31);
@@ -666,6 +666,9 @@ create_window3 (void)
 
   g_signal_connect ((gpointer) coach_saveprof, "clicked",
                     G_CALLBACK (on_coach_saveprof_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) coach_saveemp, "clicked",
+                    G_CALLBACK (on_coach_saveemp_clicked),
                     NULL);
   g_signal_connect ((gpointer) coach_valider, "clicked",
                     G_CALLBACK (on_coach_valider_clicked),

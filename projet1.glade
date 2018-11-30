@@ -1174,6 +1174,7 @@ Cardio</property>
 		  <property name="can_focus">True</property>
 		  <property name="relief">GTK_RELIEF_NORMAL</property>
 		  <property name="focus_on_click">True</property>
+		  <signal name="clicked" handler="on_coach_saveemp_clicked" last_modification_time="Fri, 30 Nov 2018 11:06:26 GMT"/>
 
 		  <child>
 		    <widget class="GtkAlignment" id="alignment33">
@@ -1346,7 +1347,7 @@ Cardio</property>
 
 	      <child>
 		<widget class="GtkButton" id="coach_valider">
-		  <property name="width_request">74</property>
+		  <property name="width_request">88</property>
 		  <property name="height_request">29</property>
 		  <property name="visible">True</property>
 		  <property name="can_focus">True</property>

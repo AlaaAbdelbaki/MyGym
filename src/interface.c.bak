@@ -242,6 +242,11 @@ create_window3 (void)
   GtkWidget *coach_entrainementj;
   GtkWidget *coach_entrainementv;
   GtkWidget *coach_entrainements;
+  GtkWidget *coach_saveemp;
+  GtkWidget *alignment33;
+  GtkWidget *hbox33;
+  GtkWidget *image35;
+  GtkWidget *label97;
   GtkWidget *coach_label84;
   GtkWidget *fixed21;
   GtkWidget *coach_label89;
@@ -283,7 +288,7 @@ create_window3 (void)
   coach_notebook2 = gtk_notebook_new ();
   gtk_widget_show (coach_notebook2);
   gtk_fixed_put (GTK_FIXED (fixed3), coach_notebook2, 0, 0);
-  gtk_widget_set_size_request (coach_notebook2, 792, 464);
+  gtk_widget_set_size_request (coach_notebook2, 800, 504);
 
   fixed19 = gtk_fixed_new ();
   gtk_widget_show (fixed19);
@@ -516,6 +521,27 @@ create_window3 (void)
   gtk_combo_box_append_text (GTK_COMBO_BOX (coach_entrainements), _("Musculation"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (coach_entrainements), _("Cardio"));
 
+  coach_saveemp = gtk_button_new ();
+  gtk_widget_show (coach_saveemp);
+  gtk_fixed_put (GTK_FIXED (fixed20), coach_saveemp, 360, 416);
+  gtk_widget_set_size_request (coach_saveemp, 136, 29);
+
+  alignment33 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment33);
+  gtk_container_add (GTK_CONTAINER (coach_saveemp), alignment33);
+
+  hbox33 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox33);
+  gtk_container_add (GTK_CONTAINER (alignment33), hbox33);
+
+  image35 = gtk_image_new_from_stock ("gtk-apply", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image35);
+  gtk_box_pack_start (GTK_BOX (hbox33), image35, FALSE, FALSE, 0);
+
+  label97 = gtk_label_new_with_mnemonic (_("Sauvgarder"));
+  gtk_widget_show (label97);
+  gtk_box_pack_start (GTK_BOX (hbox33), label97, FALSE, FALSE, 0);
+
   coach_label84 = gtk_label_new (_("Modifier mon emploi"));
   gtk_widget_show (coach_label84);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (coach_notebook2), gtk_notebook_get_nth_page (GTK_NOTEBOOK (coach_notebook2), 1), coach_label84);
@@ -690,6 +716,11 @@ create_window3 (void)
   GLADE_HOOKUP_OBJECT (window3, coach_entrainementj, "coach_entrainementj");
   GLADE_HOOKUP_OBJECT (window3, coach_entrainementv, "coach_entrainementv");
   GLADE_HOOKUP_OBJECT (window3, coach_entrainements, "coach_entrainements");
+  GLADE_HOOKUP_OBJECT (window3, coach_saveemp, "coach_saveemp");
+  GLADE_HOOKUP_OBJECT (window3, alignment33, "alignment33");
+  GLADE_HOOKUP_OBJECT (window3, hbox33, "hbox33");
+  GLADE_HOOKUP_OBJECT (window3, image35, "image35");
+  GLADE_HOOKUP_OBJECT (window3, label97, "label97");
   GLADE_HOOKUP_OBJECT (window3, coach_label84, "coach_label84");
   GLADE_HOOKUP_OBJECT (window3, fixed21, "fixed21");
   GLADE_HOOKUP_OBJECT (window3, coach_label89, "coach_label89");

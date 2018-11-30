@@ -638,3 +638,11 @@ on_coach_save_clicked                  (GtkButton       *button,
 
 }
 
+
+void
+on_coach_saveemp_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
