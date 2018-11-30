@@ -710,3 +710,59 @@ on_Nutritionniste_button19_clicked     (GtkButton       *button,
 
 }
 
+
+void
+on_button12_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_gererfiche_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_rapport_clicked                (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_button16_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_button17_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_button18_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_kine_button19_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
