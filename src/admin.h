@@ -26,7 +26,7 @@ void ajouter_personnel(personnel *p);
 int modifier_personnel(personnel *p,char cin[20]);
 int supprimer_personnel(personnel *p,char cin2[20]);
 
-void info(nom,prenom,jour,mois,annee,tel,ville,mail,role);
+void info(login,nom,prenom,jour,mois,annee,tel,ville,mail,role);
 void ajouter(login,password,role);
 #endif
 

@@ -22,7 +22,7 @@ void ajouter(char login[], char password[],int role)
    
 }
 //=============================================================================
-void info(char *nom,char *prenom,int jour,int mois,int annee,char *id,char *tel,char *ville,char *mail,int role)
+void info(char *login, char *nom,char *prenom,int jour,int mois,int annee,char *id,char *tel,char *ville,char *mail,int role)
 {
     FILE *f;
 
@@ -31,7 +31,7 @@ void info(char *nom,char *prenom,int jour,int mois,int annee,char *id,char *tel,
     {
 
    
-    fprintf(f,"%s %s %d %d %d %s %s %s %s %d\n",nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
+    fprintf(f,"%s %s %s %d %d %d %s %s %s %s %d\n",login,nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
     fclose(f);
     }
     else printf("impossssible d'ouvrir\n");

@@ -31,10 +31,14 @@ on_button1_clicked                     (GtkWidget       *objet_graphique,
 char username[30];
 char password[30];
 
+
 input1=lookup_widget(objet_graphique,"entry1");
 input2=lookup_widget(objet_graphique,"entry2");
 strcpy(username,gtk_entry_get_text(GTK_ENTRY(input1)));
 strcpy(password,gtk_entry_get_text(GTK_ENTRY(input2)));
+FILE *f=fopen("current.txt","w");
+fprintf(f,"%s",username);
+fclose(f);
 
 if(verifier(username,password)==1)
 	{
@@ -229,7 +233,7 @@ on_button9_clicked                     (GtkWidget       *object_graphique,
     else{
     role=6;
 }
-info(nom,prenom,jour,mois,annee,tel,ville,mail,role);
+info(login,nom,prenom,jour,mois,annee,tel,ville,mail,role);
 ajouter(login,password,role);
 }
 
@@ -284,6 +288,7 @@ void
 on_coach_saveprof_clicked              (GtkButton       *button,
                                         gpointer         user_data)
 {
+  /*
   GtkWidget *name;
   GtkWidget *surname;
   GtkWidget *day;
@@ -299,6 +304,10 @@ on_coach_saveprof_clicked              (GtkButton       *button,
   char mail[50];
   char num[13];
   FILE *f;
+  FILE *fp=fopen("current.txt","r");
+  char username[50];
+  fscanf(fp,"%s",username);
+  fclose(fp);
   name=lookup_widget(button,"coach_entry11");
   surname=lookup_widget(button,"coach_entry12");
   day=lookup_widget(button,"coach_spinbutton5");
@@ -313,9 +322,27 @@ on_coach_saveprof_clicked              (GtkButton       *button,
   annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(year));
   strcpy(mail,gtk_entry_get_text(GTK_ENTRY(email)));
   strcpy(num,gtk_entry_get_text(GTK_ENTRY(number)));
-  f=fopen("profilecoach.txt","w");
-  fprintf(f,"%s %s %d %s %d %s %s",nom,prenom,jour,mois,annee,mail,num);
+  f=fopen("info.txt","r");
+  FILE *aux=fopen("jfz.txt","w");
+  char user[50];
+  int role;
+    char nom[30];char prenom[30];
+    int jour,mois,annee;
+    char ville[30];char mail[30];char tel[50];char id[30];
+  while(!EOF){
+  	fscanf(f,"%s %s %s %d %d %d %s %s %s %s %d\n",user,nom,prenom,&jour,&mois,&annee,id,ville,tel,mail,&role);
+  	if(!strcmp(user,username)){
+  	fprintf(aux,"%s %s %s %d %d %d %s %s %s %s %d\n",user,name,surname,day,month,year,id,ville,number,email,role);
+  	}
+  	else {
+  	fprintf(aux,"%s %s %s %d %d %d %s %s %s %s %d\n",user,nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
+  	}
+  }
   fclose(f);
+  fclose(aux);
+  remove("info.txt");
+  rename("jfz.txt","info.txt");
+  */
 }
 
 
@@ -880,7 +907,61 @@ void
 on_dietsaveprof_clicked                (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  /*GtkWidget *name;
+  GtkWidget *surname;
+  GtkWidget *day;
+  GtkWidget *month;
+  GtkWidget *year;
+  GtkWidget *email;
+  GtkWidget *number;
+  char nom[30];
+  char prenom [30];
+  int jour;
+  char mois[10];
+  int annee;
+  char mail[50];
+  char num[13];
+  FILE *f;
+  FILE *fp=fopen("current.txt","r");
+  char username[50];
+  fscanf(fp,"%s",username);
+  fclose(fp);
+  name=lookup_widget(button,"dietentername");
+  surname=lookup_widget(button,"dietenterpname");
+  day=lookup_widget(button,"spinbuttondietj");
+  month=lookup_widget(button,"comboboxdietm");
+  year=lookup_widget(button,"spinbuttondieta");
+  email=lookup_widget(button,"dietenteremail");
+  number=lookup_widget(button,"dietentertel");
+  strcpy(nom,gtk_entry_get_text(GTK_ENTRY(name)));
+  strcpy(prenom,gtk_entry_get_text(GTK_ENTRY(surname)));
+  jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(day));
+  strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(month)));
+  annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(year));
+  strcpy(mail,gtk_entry_get_text(GTK_ENTRY(email)));
+  strcpy(num,gtk_entry_get_text(GTK_ENTRY(number)));
+  f=fopen("info.txt","r");
+  FILE *aux=fopen("jfz.txt","w");
+  char user[50];
+  int role;
+    char nom[30];char prenom[30];
+    int jour,mois,annee;
+    char ville[30];char mail[30];char tel[50];char id[30];
+  while(!EOF){
+  	fscanf(f,"%s %s %s %d %d %d %s %s %s %s %d\n",user,nom,prenom,&jour,&mois,&annee,id,ville,tel,mail,&role);
+  	if(!strcmp(user,username)){
+  	fprintf(aux,"%s %s %s %d %d %d %s %s %s %s %d\n",user,name,surname,day,month,year,id,ville,number,email,role);
+  	}
+  	else {
+  	fprintf(aux,"%s %s %s %d %d %d %s %s %s %s %d\n",user,nom,prenom,jour,mois,annee,id,ville,tel,mail,role);
+  	}
+  }
+  fclose(f);
+  fclose(aux);
+  remove("info.txt");
+  rename("jfz.txt","info.txt");
+  */
+  
 }
 
 
