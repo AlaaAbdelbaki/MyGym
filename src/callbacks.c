@@ -945,3 +945,18 @@ on_buttondietdel_clicked               (GtkButton       *button,
 
 }
 
+
+void
+on_buttonnut1_clicked                  (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+void
+on_button13k_clicked                   (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
