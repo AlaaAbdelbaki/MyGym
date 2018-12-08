@@ -13,13 +13,17 @@
 #include "support.h"
 #include "callbacks.h"
 #include "fonction.h"
+
 int
 main (int argc, char *argv[])
 {
-  GtkWidget *window1;
-  GtkWidget *window2;
-  GtkWidget *window3;
-  GtkWidget *window4;
+  GtkWidget *login;
+  GtkWidget *nutritonniste;
+  GtkWidget *coach;
+  GtkWidget *adherant;
+  GtkWidget *kine;
+  GtkWidget *diet;
+  GtkWidget *admin;
 
 #ifdef ENABLE_NLS
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -30,16 +34,15 @@ main (int argc, char *argv[])
   gtk_set_locale ();
   gtk_init (&argc, &argv);
 
-  add_pixmap_directory ("../pixmaps");
+  add_pixmap_directory (PACKAGE_DATA_DIR "/" PACKAGE "/pixmaps");
 
   /*
    * The following code was added by Glade to create one of each component
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  window1 = create_window1 ();
-  gtk_widget_show (window1);
-  
+  login = create_login ();
+  gtk_widget_show (login);
  
 
   gtk_main ();
