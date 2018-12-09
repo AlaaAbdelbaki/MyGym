@@ -18,7 +18,6 @@
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
-#include "treeview.h"
 
 #define GLADE_HOOKUP_OBJECT(component,widget,name) \
   g_object_set_data_full (G_OBJECT (component), name, \
@@ -213,6 +212,8 @@ create_nutritonniste (void)
   GtkWidget *label445;
   GtkWidget *fixed38;
   GtkWidget *treeview8;
+  GtkWidget *label558;
+  GtkWidget *entry71;
   GtkWidget *button30;
   GtkWidget *alignment76;
   GtkWidget *hbox76;
@@ -580,9 +581,20 @@ create_nutritonniste (void)
   gtk_fixed_put (GTK_FIXED (fixed38), treeview8, 8, 88);
   gtk_widget_set_size_request (treeview8, 984, 576);
 
+  label558 = gtk_label_new (_("Nom Utilisateur:"));
+  gtk_widget_show (label558);
+  gtk_fixed_put (GTK_FIXED (fixed38), label558, 112, 40);
+  gtk_widget_set_size_request (label558, 122, 17);
+
+  entry71 = gtk_entry_new ();
+  gtk_widget_show (entry71);
+  gtk_fixed_put (GTK_FIXED (fixed38), entry71, 352, 32);
+  gtk_widget_set_size_request (entry71, 224, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry71), 8226);
+
   button30 = gtk_button_new ();
   gtk_widget_show (button30);
-  gtk_fixed_put (GTK_FIXED (fixed38), button30, 416, 16);
+  gtk_fixed_put (GTK_FIXED (fixed38), button30, 712, 16);
   gtk_widget_set_size_request (button30, 144, 64);
 
   alignment76 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -703,6 +715,8 @@ create_nutritonniste (void)
   GLADE_HOOKUP_OBJECT (nutritonniste, label445, "label445");
   GLADE_HOOKUP_OBJECT (nutritonniste, fixed38, "fixed38");
   GLADE_HOOKUP_OBJECT (nutritonniste, treeview8, "treeview8");
+  GLADE_HOOKUP_OBJECT (nutritonniste, label558, "label558");
+  GLADE_HOOKUP_OBJECT (nutritonniste, entry71, "entry71");
   GLADE_HOOKUP_OBJECT (nutritonniste, button30, "button30");
   GLADE_HOOKUP_OBJECT (nutritonniste, alignment76, "alignment76");
   GLADE_HOOKUP_OBJECT (nutritonniste, hbox76, "hbox76");
@@ -788,6 +802,8 @@ create_coach (void)
   GtkWidget *hbox100;
   GtkWidget *image102;
   GtkWidget *label553;
+  GtkWidget *entry72;
+  GtkWidget *label559;
   GtkWidget *label552;
 
   coach = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -1100,7 +1116,7 @@ create_coach (void)
 
   button54 = gtk_button_new ();
   gtk_widget_show (button54);
-  gtk_fixed_put (GTK_FIXED (fixed48), button54, 416, 16);
+  gtk_fixed_put (GTK_FIXED (fixed48), button54, 744, 16);
   gtk_widget_set_size_request (button54, 144, 64);
 
   alignment101 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -1118,6 +1134,17 @@ create_coach (void)
   label553 = gtk_label_new_with_mnemonic (_("Actualiser"));
   gtk_widget_show (label553);
   gtk_box_pack_start (GTK_BOX (hbox100), label553, FALSE, FALSE, 0);
+
+  entry72 = gtk_entry_new ();
+  gtk_widget_show (entry72);
+  gtk_fixed_put (GTK_FIXED (fixed48), entry72, 360, 40);
+  gtk_widget_set_size_request (entry72, 280, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry72), 8226);
+
+  label559 = gtk_label_new (_("Nom Utilisateur:"));
+  gtk_widget_show (label559);
+  gtk_fixed_put (GTK_FIXED (fixed48), label559, 152, 48);
+  gtk_widget_set_size_request (label559, 127, 17);
 
   label552 = gtk_label_new (_("Rapport"));
   gtk_widget_show (label552);
@@ -1215,6 +1242,8 @@ create_coach (void)
   GLADE_HOOKUP_OBJECT (coach, hbox100, "hbox100");
   GLADE_HOOKUP_OBJECT (coach, image102, "image102");
   GLADE_HOOKUP_OBJECT (coach, label553, "label553");
+  GLADE_HOOKUP_OBJECT (coach, entry72, "entry72");
+  GLADE_HOOKUP_OBJECT (coach, label559, "label559");
   GLADE_HOOKUP_OBJECT (coach, label552, "label552");
 
   return coach;
@@ -1805,6 +1834,8 @@ create_kine (void)
   GtkWidget *hbox101;
   GtkWidget *image103;
   GtkWidget *label555;
+  GtkWidget *label560;
+  GtkWidget *entry73;
   GtkWidget *label554;
 
   kine = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -2117,7 +2148,7 @@ create_kine (void)
 
   button55 = gtk_button_new ();
   gtk_widget_show (button55);
-  gtk_fixed_put (GTK_FIXED (fixed49), button55, 416, 16);
+  gtk_fixed_put (GTK_FIXED (fixed49), button55, 728, 8);
   gtk_widget_set_size_request (button55, 144, 64);
 
   alignment102 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -2135,6 +2166,17 @@ create_kine (void)
   label555 = gtk_label_new_with_mnemonic (_("Actualiser"));
   gtk_widget_show (label555);
   gtk_box_pack_start (GTK_BOX (hbox101), label555, FALSE, FALSE, 0);
+
+  label560 = gtk_label_new (_("Nom Utilisateur"));
+  gtk_widget_show (label560);
+  gtk_fixed_put (GTK_FIXED (fixed49), label560, 104, 40);
+  gtk_widget_set_size_request (label560, 132, 17);
+
+  entry73 = gtk_entry_new ();
+  gtk_widget_show (entry73);
+  gtk_fixed_put (GTK_FIXED (fixed49), entry73, 336, 32);
+  gtk_widget_set_size_request (entry73, 256, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry73), 8226);
 
   label554 = gtk_label_new (_("Rapports"));
   gtk_widget_show (label554);
@@ -2232,6 +2274,8 @@ create_kine (void)
   GLADE_HOOKUP_OBJECT (kine, hbox101, "hbox101");
   GLADE_HOOKUP_OBJECT (kine, image103, "image103");
   GLADE_HOOKUP_OBJECT (kine, label555, "label555");
+  GLADE_HOOKUP_OBJECT (kine, label560, "label560");
+  GLADE_HOOKUP_OBJECT (kine, entry73, "entry73");
   GLADE_HOOKUP_OBJECT (kine, label554, "label554");
 
   return kine;
@@ -2342,6 +2386,8 @@ create_diet (void)
   GtkWidget *hbox102;
   GtkWidget *image104;
   GtkWidget *label557;
+  GtkWidget *entry74;
+  GtkWidget *label561;
   GtkWidget *label556;
 
   diet = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -2779,7 +2825,7 @@ create_diet (void)
 
   button56 = gtk_button_new ();
   gtk_widget_show (button56);
-  gtk_fixed_put (GTK_FIXED (fixed50), button56, 416, 16);
+  gtk_fixed_put (GTK_FIXED (fixed50), button56, 704, 8);
   gtk_widget_set_size_request (button56, 144, 64);
 
   alignment103 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -2797,6 +2843,17 @@ create_diet (void)
   label557 = gtk_label_new_with_mnemonic (_("Actualiser"));
   gtk_widget_show (label557);
   gtk_box_pack_start (GTK_BOX (hbox102), label557, FALSE, FALSE, 0);
+
+  entry74 = gtk_entry_new ();
+  gtk_widget_show (entry74);
+  gtk_fixed_put (GTK_FIXED (fixed50), entry74, 352, 24);
+  gtk_widget_set_size_request (entry74, 280, 27);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry74), 8226);
+
+  label561 = gtk_label_new (_("Nom Utilisateur:"));
+  gtk_widget_show (label561);
+  gtk_fixed_put (GTK_FIXED (fixed50), label561, 144, 32);
+  gtk_widget_set_size_request (label561, 134, 17);
 
   label556 = gtk_label_new (_("Rapports"));
   gtk_widget_show (label556);
@@ -2930,6 +2987,8 @@ create_diet (void)
   GLADE_HOOKUP_OBJECT (diet, hbox102, "hbox102");
   GLADE_HOOKUP_OBJECT (diet, image104, "image104");
   GLADE_HOOKUP_OBJECT (diet, label557, "label557");
+  GLADE_HOOKUP_OBJECT (diet, entry74, "entry74");
+  GLADE_HOOKUP_OBJECT (diet, label561, "label561");
   GLADE_HOOKUP_OBJECT (diet, label556, "label556");
 
   return diet;
@@ -3631,9 +3690,6 @@ create_admin (void)
   GLADE_HOOKUP_OBJECT (admin, image98, "image98");
   GLADE_HOOKUP_OBJECT (admin, label546, "label546");
   GLADE_HOOKUP_OBJECT (admin, label545, "label545");
-
-  treeview10=lookup_widget(admin,"treeview10");
-  tree(treeview10);
 
   return admin;
 }
