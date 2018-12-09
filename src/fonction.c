@@ -28,7 +28,6 @@ int verifier(char username[],char password[])
 	return(n);
 }
 
-//************************************************************************************************//
 
 
 void ajouter(char username[], char password[],int role)
@@ -39,8 +38,6 @@ void ajouter(char username[], char password[],int role)
     f=fopen("users.txt","a");
     if (f!=NULL)
     {
-
-   
     fprintf(f,"%s %s %d\n",username,password,role);
     fclose(f);
     }
@@ -50,15 +47,13 @@ void ajouter(char username[], char password[],int role)
    
    
 }
-//*******************************************************************************************************************/
-void information(char nom[],char prenom[],char ville[],char id[],int jour,int mois,int annee,char tel[],char mail[])
-{
-    FILE *f;
 
-    f=fopen("information.txt","a");
-    if (f!=NULL)
+void information(profil p)
+{
+    FILE *f=fopen("information.txt","a");
+    if (!f)
     {
-    fprintf(f,"%s %s %s %s %d %d %d %s %s\n",nom,prenom,ville,id,jour,mois,annee,tel,mail);
+    fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",p.username,p.nom,p.prenom,p.jour,p.mois,p.annee,p.ville,p.id,p.tel,p.mail);
     }	
 fclose(f);
 }

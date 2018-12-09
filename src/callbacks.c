@@ -380,9 +380,8 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data)
 {
 	
-
- char nom[30];char prenom[30];char ville[30];char id[30];int jour;int mois;int annee;char tel[30];char mail[30];
- char username[30];char password[30];int role;
+    profil p;
+    int role;
     GtkWidget *entry48=lookup_widget(object_graphique,"entry48");
     GtkWidget *entry49=lookup_widget(object_graphique,"entry49");
     GtkWidget *entry51=lookup_widget(object_graphique,"entry51");
@@ -396,30 +395,32 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
     GtkWidget *j=lookup_widget(object_graphique, "spinbutton35");
     GtkWidget *a=lookup_widget(object_graphique, "spinbutton37");
 
-    strcpy(username,gtk_entry_get_text(GTK_ENTRY(entry48)));
-    strcpy(password,gtk_entry_get_text(GTK_ENTRY(entry49)));
-    strcpy(nom,gtk_entry_get_text(GTK_ENTRY(entry51)));
-    strcpy(prenom,gtk_entry_get_text(GTK_ENTRY(entry52)));
-    strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry53)));
-    strcpy(id,gtk_entry_get_text(GTK_ENTRY(entry54)));
-    strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry55)));
-	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry50)));
+    strcpy(p.username,gtk_entry_get_text(GTK_ENTRY(entry48)));
+    strcpy(p.password,gtk_entry_get_text(GTK_ENTRY(entry49)));
+    strcpy(p.nom,gtk_entry_get_text(GTK_ENTRY(entry51)));
+    strcpy(p.prenom,gtk_entry_get_text(GTK_ENTRY(entry52)));
+    strcpy(p.ville,gtk_entry_get_text(GTK_ENTRY(entry53)));
+    strcpy(p.id,gtk_entry_get_text(GTK_ENTRY(entry54)));
+    strcpy(p.tel,gtk_entry_get_text(GTK_ENTRY(entry55)));
+    strcpy(p.mail,gtk_entry_get_text(GTK_ENTRY(entry50)));
 
-    jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
-    mois=gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox11));
-    annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
+    p.jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
+    p.mois=gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox11));
+    p.annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
+    
+    p.role=gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9));
 
 
-    if(strcmp("Coach",gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)))==0)
+    if(strcmp("Coach",p.role)==0)
     {    role=2;
     }
-    else if(strcmp("Adherent",gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)))==0)
+    else if(strcmp("Adherent",p.role)==0)
     {    role=3;
     }
-    else if(strcmp("Kine",gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)))==0)
+    else if(strcmp("Kine",p.role)==0)
     {    role=5;
     }
-	else if(strcmp("Dieteticien",gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)))==0)
+	else if(strcmp("Dieteticien",p.role)==0)
     {    role=4;
     }
 
@@ -427,8 +428,8 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
     role=6;
 }
 
-ajouter(username,password,role);
-information(nom,prenom,ville,id,jour,mois,annee,tel,mail);
+ajouter(p.username,p.password,role);
+information(p);
 
 }
 
@@ -465,6 +466,6 @@ on_button50_clicked                    (GtkWidget       *object_graphique,
 	GtkWidget *treeview10;
 	admin = lookup_widget(object_graphique,"admin");
 	treeview10=lookup_widget(admin,"treeview10");
-	tree(treeview10);
+	treeprofile(treeview10);
 }
 

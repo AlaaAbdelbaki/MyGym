@@ -1,5 +1,20 @@
 #include <gtk/gtk.h>
+
+typedef struct {
+	char username[20];
+	char password[20];
+	char role[20];
+	char nom[20];
+	char prenom[20];
+	int jour;
+	char mois[20];
+	int annee;
+	char ville[20];
+	char id[20];
+	char tel[20];
+	char mail[20];
+}profil;
+
 int verifier(char username[],char password[]);
-void afficher_coach(GtkWidget *list);
 void ajouter(char username[], char password[],int role);
-void information(char nom[],char prenom[],char ville[],char id[],int jour,int mois,int annee,char tel[],char mail[]);
+void information(profil p);
