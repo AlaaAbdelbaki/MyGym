@@ -12,7 +12,8 @@ mygym_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	fonction.c fonction.h
+	fonction.c fonction.h \
+	treeview.c treeview.h
 
 mygym_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 
