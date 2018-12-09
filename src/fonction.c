@@ -60,7 +60,9 @@ void rechnom (char *username, char *nom, char *prenom){
 			break;
 		}
 	}
+	fclose(f);
 }
+
 
 
 

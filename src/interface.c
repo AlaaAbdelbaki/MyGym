@@ -18,6 +18,8 @@
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
+#include "treeview.h"
+#include "fonction.h"
 
 #define GLADE_HOOKUP_OBJECT(component,widget,name) \
   g_object_set_data_full (G_OBJECT (component), name, \
@@ -3073,6 +3075,7 @@ create_diet (void)
   GLADE_HOOKUP_OBJECT (diet, entry74, "entry74");
   GLADE_HOOKUP_OBJECT (diet, label561, "label561");
   GLADE_HOOKUP_OBJECT (diet, label556, "label556");
+  
 
   return diet;
 }
@@ -3773,7 +3776,8 @@ create_admin (void)
   GLADE_HOOKUP_OBJECT (admin, image98, "image98");
   GLADE_HOOKUP_OBJECT (admin, label546, "label546");
   GLADE_HOOKUP_OBJECT (admin, label545, "label545");
-
+  treeview10=lookup_widget(admin,"treeview10");
+  treeprofile(treeview10);
   return admin;
 }
 

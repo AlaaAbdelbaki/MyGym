@@ -76,6 +76,9 @@ else if(verifier(username,password)==6)
 	gtk_widget_show(nutritonniste);
 	gtk_widget_destroy(login);
 	}
+	FILE *f=fopen("current.txt","w+");
+	fprintf(f,"%s",username);
+	fclose(f);
 }
 
 
@@ -84,7 +87,40 @@ void
 on_button32_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+	FILE *fp=fopen("current.txt","r");
+	char username[20];
+	fscanf(fp,"%s",username);
+	fclose(fp);
+	char mail[20];
+	char tel[20];
+	char ville[20];
+	GtkWidget *entry1=lookup_widget(button,"entry45");
+	GtkWidget *entry2=lookup_widget(button,"entry46");
+	GtkWidget *entry3=lookup_widget(button,"entry47");
+	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
+	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
+	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
+	FILE *f=fopen("information.txt","r");
+	info *tab;
+	int i=0;
+	tab=(info *)malloc(sizeof(info));
+	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
+		if(strcmp(tab[i].username,username)==0){
+			strcpy(tab[i].ville,ville);
+			strcpy(tab[i].tel,tel);
+			strcpy(tab[i].mail,mail);
+		}
+		i++;
+		tab=(info *)realloc(tab,(i+1)*sizeof(info));
+	}
+	fclose(f);
+	f=fopen("information.txt","w+");
+	int j=i;
+	i=0;
+	for(i=0;i<j;i++){
+		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
+	}
+	fclose(f);
 }
 
 
@@ -140,7 +176,40 @@ void
 on_coach_saveprof_clicked              (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+	FILE *fp=fopen("current.txt","r");
+	char username[20];
+	fscanf(fp,"%s",username);
+	fclose(fp);
+	char mail[20];
+	char tel[20];
+	char ville[20];
+	GtkWidget *entry1=lookup_widget(button,"coach_entry11");
+	GtkWidget *entry2=lookup_widget(button,"coach_entry13");
+	GtkWidget *entry3=lookup_widget(button,"coach_entry14");
+	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
+	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
+	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
+	FILE *f=fopen("information.txt","r");
+	info *tab;
+	int i=0;
+	tab=(info *)malloc(sizeof(info));
+	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
+		if(strcmp(tab[i].username,username)==0){
+			strcpy(tab[i].ville,ville);
+			strcpy(tab[i].tel,tel);
+			strcpy(tab[i].mail,mail);
+		}
+		i++;
+		tab=(info *)realloc(tab,(i+1)*sizeof(info));
+	}
+	fclose(f);
+	f=fopen("information.txt","w+");
+	int j=i;
+	i=0;
+	for(i=0;i<j;i++){
+		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
+	}
+	fclose(f);
 }
 
 
@@ -196,7 +265,40 @@ void
 on_button19_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+	FILE *fp=fopen("current.txt","r");
+	char username[20];
+	fscanf(fp,"%s",username);
+	fclose(fp);
+	char mail[20];
+	char tel[20];
+	char ville[20];
+	GtkWidget *entry1=lookup_widget(button,"entry32");
+	GtkWidget *entry2=lookup_widget(button,"entry33");
+	GtkWidget *entry3=lookup_widget(button,"entry34");
+	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
+	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
+	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
+	FILE *f=fopen("information.txt","r");
+	info *tab;
+	int i=0;
+	tab=(info *)malloc(sizeof(info));
+	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
+		if(strcmp(tab[i].username,username)==0){
+			strcpy(tab[i].ville,ville);
+			strcpy(tab[i].tel,tel);
+			strcpy(tab[i].mail,mail);
+		}
+		i++;
+		tab=(info *)realloc(tab,(i+1)*sizeof(info));
+	}
+	fclose(f);
+	f=fopen("information.txt","w+");
+	int j=i;
+	i=0;
+	for(i=0;i<j;i++){
+		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
+	}
+	fclose(f);
 }
 
 
@@ -236,7 +338,40 @@ void
 on_button35_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+	FILE *fp=fopen("current.txt","r");
+	char username[20];
+	fscanf(fp,"%s",username);
+	fclose(fp);
+	char mail[20];
+	char tel[20];
+	char ville[20];
+	GtkWidget *entry1=lookup_widget(button,"entry56");
+	GtkWidget *entry2=lookup_widget(button,"entry57");
+	GtkWidget *entry3=lookup_widget(button,"entry58");
+	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
+	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
+	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
+	FILE *f=fopen("information.txt","r");
+	info *tab;
+	int i=0;
+	tab=(info *)malloc(sizeof(info));
+	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
+		if(strcmp(tab[i].username,username)==0){
+			strcpy(tab[i].ville,ville);
+			strcpy(tab[i].tel,tel);
+			strcpy(tab[i].mail,mail);
+		}
+		i++;
+		tab=(info *)realloc(tab,(i+1)*sizeof(info));
+	}
+	fclose(f);
+	f=fopen("information.txt","w+");
+	int j=i;
+	i=0;
+	for(i=0;i<j;i++){
+		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
+	}
+	fclose(f);
 }
 
 
@@ -292,7 +427,41 @@ void
 on_button31_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+	FILE *fp=fopen("current.txt","r");
+	char username[20];
+	fscanf(fp,"%s",username);
+	fclose(fp);
+	char mail[20];
+	char tel[20];
+	char ville[20];
+	GtkWidget *entry1=lookup_widget(button,"entry42");
+	GtkWidget *entry2=lookup_widget(button,"entry43");
+	GtkWidget *entry3=lookup_widget(button,"entry44");
+	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
+	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
+	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
+	FILE *f=fopen("information.txt","r");
+	info *tab;
+	int i=0;
+	tab=(info *)malloc(sizeof(info));
+	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
+		if(strcmp(tab[i].username,username)==0){
+			strcpy(tab[i].ville,ville);
+			strcpy(tab[i].tel,tel);
+			strcpy(tab[i].mail,mail);
+		}
+		i++;
+		tab=(info *)realloc(tab,(i+1)*sizeof(info));
+	}
+	fclose(f);
+	f=fopen("information.txt","w+");
+	int j=i;
+	i=0;
+	for(i=0;i<j;i++){
+		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
+	}
+	fclose(f);
+	
 }
 
 
