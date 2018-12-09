@@ -469,3 +469,19 @@ on_button50_clicked                    (GtkWidget       *object_graphique,
 	treeprofile(treeview10);
 }
 
+
+void
+on_button58_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_button57_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+

@@ -172,3 +172,11 @@ on_button49_clicked                    (GtkButton       *button,
 void
 on_button50_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data);
+
+void
+on_button58_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button57_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);

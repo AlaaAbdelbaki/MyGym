@@ -18,7 +18,6 @@
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
-#include "treeview.h"
 
 #define GLADE_HOOKUP_OBJECT(component,widget,name) \
   g_object_set_data_full (G_OBJECT (component), name, \
@@ -210,6 +209,18 @@ create_nutritonniste (void)
   GtkWidget *hbox74;
   GtkWidget *image76;
   GtkWidget *label458;
+  GtkWidget *entry75;
+  GtkWidget *label562;
+  GtkWidget *button58;
+  GtkWidget *alignment105;
+  GtkWidget *hbox104;
+  GtkWidget *image106;
+  GtkWidget *label564;
+  GtkWidget *button57;
+  GtkWidget *alignment104;
+  GtkWidget *hbox103;
+  GtkWidget *image105;
+  GtkWidget *label563;
   GtkWidget *label445;
   GtkWidget *fixed38;
   GtkWidget *treeview8;
@@ -503,7 +514,7 @@ create_nutritonniste (void)
   treeview7 = gtk_tree_view_new ();
   gtk_widget_show (treeview7);
   gtk_fixed_put (GTK_FIXED (fixed37), treeview7, 8, 248);
-  gtk_widget_set_size_request (treeview7, 984, 416);
+  gtk_widget_set_size_request (treeview7, 976, 400);
 
   spinbutton33_adj = gtk_adjustment_new (60, 20, 1000, 1, 10, 10);
   spinbutton33 = gtk_spin_button_new (GTK_ADJUSTMENT (spinbutton33_adj), 1, 0);
@@ -568,6 +579,59 @@ create_nutritonniste (void)
   label458 = gtk_label_new_with_mnemonic (_("Actualiser"));
   gtk_widget_show (label458);
   gtk_box_pack_start (GTK_BOX (hbox74), label458, FALSE, FALSE, 0);
+
+  entry75 = gtk_entry_new ();
+  gtk_widget_show (entry75);
+  gtk_fixed_put (GTK_FIXED (fixed37), entry75, 400, 120);
+  gtk_widget_set_size_request (entry75, 184, 24);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry75), 8226);
+
+  label562 = gtk_label_new (_("Adherant (username):"));
+  gtk_widget_show (label562);
+  gtk_fixed_put (GTK_FIXED (fixed37), label562, 248, 120);
+  gtk_widget_set_size_request (label562, 160, 24);
+
+  button58 = gtk_button_new ();
+  gtk_widget_show (button58);
+  gtk_fixed_put (GTK_FIXED (fixed37), button58, 832, 56);
+  gtk_widget_set_size_request (button58, 120, 32);
+
+  alignment105 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment105);
+  gtk_container_add (GTK_CONTAINER (button58), alignment105);
+
+  hbox104 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox104);
+  gtk_container_add (GTK_CONTAINER (alignment105), hbox104);
+
+  image106 = gtk_image_new_from_stock ("gtk-delete", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image106);
+  gtk_box_pack_start (GTK_BOX (hbox104), image106, FALSE, FALSE, 0);
+
+  label564 = gtk_label_new_with_mnemonic (_("Supprimer"));
+  gtk_widget_show (label564);
+  gtk_box_pack_start (GTK_BOX (hbox104), label564, FALSE, FALSE, 0);
+
+  button57 = gtk_button_new ();
+  gtk_widget_show (button57);
+  gtk_fixed_put (GTK_FIXED (fixed37), button57, 704, 56);
+  gtk_widget_set_size_request (button57, 120, 32);
+
+  alignment104 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment104);
+  gtk_container_add (GTK_CONTAINER (button57), alignment104);
+
+  hbox103 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox103);
+  gtk_container_add (GTK_CONTAINER (alignment104), hbox103);
+
+  image105 = gtk_image_new_from_stock ("gtk-add", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image105);
+  gtk_box_pack_start (GTK_BOX (hbox103), image105, FALSE, FALSE, 0);
+
+  label563 = gtk_label_new_with_mnemonic (_("Ajouter"));
+  gtk_widget_show (label563);
+  gtk_box_pack_start (GTK_BOX (hbox103), label563, FALSE, FALSE, 0);
 
   label445 = gtk_label_new (_("Fiche m\303\251dicale"));
   gtk_widget_show (label445);
@@ -635,6 +699,12 @@ create_nutritonniste (void)
                     NULL);
   g_signal_connect ((gpointer) button28, "clicked",
                     G_CALLBACK (on_button28_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button58, "clicked",
+                    G_CALLBACK (on_button58_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) button57, "clicked",
+                    G_CALLBACK (on_button57_clicked),
                     NULL);
   g_signal_connect ((gpointer) button30, "clicked",
                     G_CALLBACK (on_button30_clicked),
@@ -713,6 +783,18 @@ create_nutritonniste (void)
   GLADE_HOOKUP_OBJECT (nutritonniste, hbox74, "hbox74");
   GLADE_HOOKUP_OBJECT (nutritonniste, image76, "image76");
   GLADE_HOOKUP_OBJECT (nutritonniste, label458, "label458");
+  GLADE_HOOKUP_OBJECT (nutritonniste, entry75, "entry75");
+  GLADE_HOOKUP_OBJECT (nutritonniste, label562, "label562");
+  GLADE_HOOKUP_OBJECT (nutritonniste, button58, "button58");
+  GLADE_HOOKUP_OBJECT (nutritonniste, alignment105, "alignment105");
+  GLADE_HOOKUP_OBJECT (nutritonniste, hbox104, "hbox104");
+  GLADE_HOOKUP_OBJECT (nutritonniste, image106, "image106");
+  GLADE_HOOKUP_OBJECT (nutritonniste, label564, "label564");
+  GLADE_HOOKUP_OBJECT (nutritonniste, button57, "button57");
+  GLADE_HOOKUP_OBJECT (nutritonniste, alignment104, "alignment104");
+  GLADE_HOOKUP_OBJECT (nutritonniste, hbox103, "hbox103");
+  GLADE_HOOKUP_OBJECT (nutritonniste, image105, "image105");
+  GLADE_HOOKUP_OBJECT (nutritonniste, label563, "label563");
   GLADE_HOOKUP_OBJECT (nutritonniste, label445, "label445");
   GLADE_HOOKUP_OBJECT (nutritonniste, fixed38, "fixed38");
   GLADE_HOOKUP_OBJECT (nutritonniste, treeview8, "treeview8");
@@ -2364,16 +2446,16 @@ create_diet (void)
   GtkWidget *label252diet;
   GtkWidget *label253diet;
   GtkWidget *label248diet;
-  GtkWidget *buttondietadd;
-  GtkWidget *alignment49;
-  GtkWidget *hbox49;
-  GtkWidget *image51;
-  GtkWidget *label256;
   GtkWidget *buttondietmod;
   GtkWidget *alignment50;
   GtkWidget *hbox50;
   GtkWidget *image52;
   GtkWidget *label257;
+  GtkWidget *buttondietadd;
+  GtkWidget *alignment49;
+  GtkWidget *hbox49;
+  GtkWidget *image51;
+  GtkWidget *label256;
   GtkWidget *buttondietdel;
   GtkWidget *alignment51;
   GtkWidget *hbox51;
@@ -2748,27 +2830,6 @@ create_diet (void)
   gtk_fixed_put (GTK_FIXED (fixed46diet), label248diet, 296, 360);
   gtk_widget_set_size_request (label248diet, 87, 30);
 
-  buttondietadd = gtk_button_new ();
-  gtk_widget_show (buttondietadd);
-  gtk_fixed_put (GTK_FIXED (fixed46diet), buttondietadd, 232, 440);
-  gtk_widget_set_size_request (buttondietadd, 120, 32);
-
-  alignment49 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment49);
-  gtk_container_add (GTK_CONTAINER (buttondietadd), alignment49);
-
-  hbox49 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox49);
-  gtk_container_add (GTK_CONTAINER (alignment49), hbox49);
-
-  image51 = gtk_image_new_from_stock ("gtk-add", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image51);
-  gtk_box_pack_start (GTK_BOX (hbox49), image51, FALSE, FALSE, 0);
-
-  label256 = gtk_label_new_with_mnemonic (_("Ajouter"));
-  gtk_widget_show (label256);
-  gtk_box_pack_start (GTK_BOX (hbox49), label256, FALSE, FALSE, 0);
-
   buttondietmod = gtk_button_new ();
   gtk_widget_show (buttondietmod);
   gtk_fixed_put (GTK_FIXED (fixed46diet), buttondietmod, 424, 440);
@@ -2789,6 +2850,27 @@ create_diet (void)
   label257 = gtk_label_new_with_mnemonic (_("Modifier"));
   gtk_widget_show (label257);
   gtk_box_pack_start (GTK_BOX (hbox50), label257, FALSE, FALSE, 0);
+
+  buttondietadd = gtk_button_new ();
+  gtk_widget_show (buttondietadd);
+  gtk_fixed_put (GTK_FIXED (fixed46diet), buttondietadd, 232, 440);
+  gtk_widget_set_size_request (buttondietadd, 120, 32);
+
+  alignment49 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment49);
+  gtk_container_add (GTK_CONTAINER (buttondietadd), alignment49);
+
+  hbox49 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox49);
+  gtk_container_add (GTK_CONTAINER (alignment49), hbox49);
+
+  image51 = gtk_image_new_from_stock ("gtk-add", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image51);
+  gtk_box_pack_start (GTK_BOX (hbox49), image51, FALSE, FALSE, 0);
+
+  label256 = gtk_label_new_with_mnemonic (_("Ajouter"));
+  gtk_widget_show (label256);
+  gtk_box_pack_start (GTK_BOX (hbox49), label256, FALSE, FALSE, 0);
 
   buttondietdel = gtk_button_new ();
   gtk_widget_show (buttondietdel);
@@ -2878,11 +2960,11 @@ create_diet (void)
   g_signal_connect ((gpointer) buttondietaff, "clicked",
                     G_CALLBACK (on_buttondietaff_clicked),
                     NULL);
-  g_signal_connect ((gpointer) buttondietadd, "clicked",
-                    G_CALLBACK (on_buttondietadd_clicked),
-                    NULL);
   g_signal_connect ((gpointer) buttondietmod, "clicked",
                     G_CALLBACK (on_buttondietmod_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttondietadd, "clicked",
+                    G_CALLBACK (on_buttondietadd_clicked),
                     NULL);
   g_signal_connect ((gpointer) buttondietdel, "clicked",
                     G_CALLBACK (on_buttondietdel_clicked),
@@ -2965,16 +3047,16 @@ create_diet (void)
   GLADE_HOOKUP_OBJECT (diet, label252diet, "label252diet");
   GLADE_HOOKUP_OBJECT (diet, label253diet, "label253diet");
   GLADE_HOOKUP_OBJECT (diet, label248diet, "label248diet");
-  GLADE_HOOKUP_OBJECT (diet, buttondietadd, "buttondietadd");
-  GLADE_HOOKUP_OBJECT (diet, alignment49, "alignment49");
-  GLADE_HOOKUP_OBJECT (diet, hbox49, "hbox49");
-  GLADE_HOOKUP_OBJECT (diet, image51, "image51");
-  GLADE_HOOKUP_OBJECT (diet, label256, "label256");
   GLADE_HOOKUP_OBJECT (diet, buttondietmod, "buttondietmod");
   GLADE_HOOKUP_OBJECT (diet, alignment50, "alignment50");
   GLADE_HOOKUP_OBJECT (diet, hbox50, "hbox50");
   GLADE_HOOKUP_OBJECT (diet, image52, "image52");
   GLADE_HOOKUP_OBJECT (diet, label257, "label257");
+  GLADE_HOOKUP_OBJECT (diet, buttondietadd, "buttondietadd");
+  GLADE_HOOKUP_OBJECT (diet, alignment49, "alignment49");
+  GLADE_HOOKUP_OBJECT (diet, hbox49, "hbox49");
+  GLADE_HOOKUP_OBJECT (diet, image51, "image51");
+  GLADE_HOOKUP_OBJECT (diet, label256, "label256");
   GLADE_HOOKUP_OBJECT (diet, buttondietdel, "buttondietdel");
   GLADE_HOOKUP_OBJECT (diet, alignment51, "alignment51");
   GLADE_HOOKUP_OBJECT (diet, hbox51, "hbox51");
@@ -3691,8 +3773,7 @@ create_admin (void)
   GLADE_HOOKUP_OBJECT (admin, image98, "image98");
   GLADE_HOOKUP_OBJECT (admin, label546, "label546");
   GLADE_HOOKUP_OBJECT (admin, label545, "label545");
-  treeview10=lookup_widget(admin,"treeview10");
-  treeprofile(treeview10);
+
   return admin;
 }
 
