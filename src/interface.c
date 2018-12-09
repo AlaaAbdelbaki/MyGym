@@ -3692,7 +3692,7 @@ create_admin (void)
   GLADE_HOOKUP_OBJECT (admin, label546, "label546");
   GLADE_HOOKUP_OBJECT (admin, label545, "label545");
   treeview10=lookup_widget(admin,"treeview10");
-  tree(treeview10);
+  treeprofile(treeview10);
   return admin;
 }
 

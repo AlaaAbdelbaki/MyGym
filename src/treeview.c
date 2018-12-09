@@ -109,9 +109,9 @@ store = gtk_tree_view_get_model(liste);
 	{
  		//f = fopen("information.txt", "a+");
 
-              while(fscanf(f,"%s%s%s%s%s%s%s%s%s%s\n",username,nom,prenom,jour,mois,annee,ville,id,tel,mail)!=EOF)
+              while(fscanf(f,"%s %s %s %s %s %s %s %s %s %s\n",username,nom,prenom,jour,mois,annee,ville,id,tel,mail)!=EOF)
 		{
-			fscanf(f1,"%s %s %d",username,password,role1);
+			fscanf(f1,"%s %s %d",username,password,&role1);
 			switch (role1){
 				case 1:strcpy(role,"admin");
 				break;

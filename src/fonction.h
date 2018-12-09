@@ -1,6 +1,6 @@
 #include <gtk/gtk.h>
 
-typedef struct {
+struct pr{
 	char username[20];
 	char password[20];
 	char role[20];
@@ -13,8 +13,11 @@ typedef struct {
 	char id[20];
 	char tel[20];
 	char mail[20];
-}profil;
+};
+
+typedef struct pr info;
 
 int verifier(char username[],char password[]);
 void ajouter(char username[], char password[],int role);
-void information(profil p);
+void information(info p);
+void rechnom (char *username, char *nom, char *prenom);

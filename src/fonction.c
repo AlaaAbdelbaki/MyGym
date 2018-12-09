@@ -33,31 +33,34 @@ int verifier(char username[],char password[])
 void ajouter(char username[], char password[],int role)
 {
    
-    FILE *f;
-
-    f=fopen("users.txt","a");
-    if (f!=NULL)
+    FILE *f=fopen("users.txt","a");
+    if (f)
     {
     fprintf(f,"%s %s %d\n",username,password,role);
-    fclose(f);
     }
-    else printf("impossssible d'ouvrir\n");
-
-
-   
-   
+    fclose(f);
 }
 
-void information(profil p)
+void information(info p)
 {
     FILE *f=fopen("information.txt","a");
-    if (!f)
+    if (f)
     {
     fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",p.username,p.nom,p.prenom,p.jour,p.mois,p.annee,p.ville,p.id,p.tel,p.mail);
     }	
 fclose(f);
 }
 
+void rechnom (char *username, char *nom, char *prenom){
+	FILE *f=fopen("information.txt","r");
+	char user[20];
+	char ch[200];
+	while(fscanf(f,"%s %s %s %s\n",user,nom,prenom,ch)!=EOF){
+		if(strcmp(user,username)==0){
+			break;
+		}
+	}
+}
 
 
 

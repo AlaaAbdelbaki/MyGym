@@ -3,6 +3,7 @@
 #endif
 
 #include <gtk/gtk.h>
+#include <string.h>
 
 #include "callbacks.h"
 #include "interface.h"
@@ -380,7 +381,7 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data)
 {
 	
-    profil p;
+    info p;
     int role;
     GtkWidget *entry48=lookup_widget(object_graphique,"entry48");
     GtkWidget *entry49=lookup_widget(object_graphique,"entry49");
@@ -405,11 +406,10 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
     strcpy(p.mail,gtk_entry_get_text(GTK_ENTRY(entry50)));
 
     p.jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
-    p.mois=gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox11));
     p.annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
     
-    p.role=gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9));
-
+    strcpy(p.role,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)));
+    strcpy(p.mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox11)));
 
     if(strcmp("Coach",p.role)==0)
     {    role=2;
