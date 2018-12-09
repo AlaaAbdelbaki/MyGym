@@ -1,2 +1,2 @@
 #include <gtk/gtk.h>
-void tree(GtkWidget *liste);
+void treeprofile(GtkWidget *liste);
