@@ -225,7 +225,34 @@ void
 on_button51_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *date;
+  GtkWidget *mois;
+  GtkWidget *annee;
+  GtkWidget *heure;
+  GtkWidget *username;
+  int day;
+  char month[10];
+  int year;
+  char user[20];
+  char coach[20];
+  int time;
+  FILE *f1,*f2;
+  date=lookup_widget(button,"spinbutton43");
+  mois=lookup_widget(button,"combobox14");
+  annee=lookup_widget(button,"spinbutton44");
+  heure=lookup_widget(button,"spinbutton45");
+  username=lookup_widget(button,"entry70");
+  strcpy(month,gtk_combo_box_get_active_text(GTK_COMBO_BOX(mois)));
+  day=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(date));
+  year=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(annee));
+  time=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(heure));
+  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
+  f1=fopen("current.txt","r");
+  f2=fopen("rdv.txt","a+");
+  fscanf(f1,"%s",coach);
+  fclose(f1);
+  fprintf(f2,"%s %s %d %s %d %d",coach,user,day,month,year,time);
+  fclose(f2);
 }
 
 
@@ -461,7 +488,7 @@ on_button31_clicked                    (GtkButton       *button,
 		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
 	}
 	fclose(f);
-	
+
 }
 
 
@@ -549,7 +576,7 @@ void
 on_button33_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data)
 {
-	
+
     info p;
     int role;
     GtkWidget *entry48=lookup_widget(object_graphique,"entry48");
@@ -576,7 +603,7 @@ on_button33_clicked                    (GtkWidget       *object_graphique,
 
     p.jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
     p.annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
-    
+
     strcpy(p.role,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox9)));
     strcpy(p.mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox11)));
 
@@ -644,7 +671,7 @@ GtkWidget *combobox12=lookup_widget(object_graphique,"combobox12");
   jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (j));
   strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox12)));
   annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (a));
-	
+
 modif(username,nom,prenom,jour,mois,annee,ville,id,tel,mail);
 
 
@@ -662,7 +689,7 @@ int x;
 GtkWidget *entry69=lookup_widget(object_graphique,"entry69");
 
 strcpy(username,gtk_entry_get_text(GTK_ENTRY(entry69)));
-	
+
 x=suppression(username);
 
 
@@ -697,4 +724,3 @@ on_button57_clicked                    (GtkButton       *button,
 {
 
 }
-
