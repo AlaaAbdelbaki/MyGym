@@ -64,6 +64,107 @@ void rechnom (char *username, char *nom, char *prenom){
 }
 
 
+int suppression(char username[])
+{
+	char nom1[30];char prenom1[30];char ville1[30];char username1[30];char mail1[30];char tel1[30];
+	char id1[30];int jour1;char mois1[30];int annee1;
+	int compteur=-1;
+	
+	FILE *f1;
+	FILE *f2;
+
+	f1=fopen("information.txt","r");
+	f2=fopen("del.txt","a");
+
+	if (f1!=NULL)
+	{
+	
+	while (fscanf(f1,"%s %s %s %d %s %d %s %s %s %s\n",username1,nom1,prenom1,&jour1,mois1,&annee1,ville1,id1,tel1,mail1) != EOF)
+	{
+		if (strcmp(username,username1)!=0)
+		{
+			fprintf(f2,"%s %s %s %d %s %d %s %s %s %s\n",username1,nom1,prenom1,jour1,mois1,annee1,ville1,id1,tel1,mail1);
+	
+		}
+		else 
+		{
+		compteur=1;
+		}
+	}
+	fclose(f1);
+	fclose(f2);
+	}
+	
+	remove("information.txt");
+	rename("del.txt","information.txt");
+
+	f1=fopen("users.txt","r");
+	f2=fopen("del.txt","a");
+
+	if (f1!=NULL)
+	{
+	
+	while (fscanf(f1,"%s %s %d\n",username1,nom1,&jour1) != EOF)
+	{
+		if (strcmp(username,username1)!=0)
+		{
+			fprintf(f2,"%s %s %d\n",username1,nom1,jour1);
+	
+		}
+		else 
+		{
+		compteur=1;
+		}
+	}
+	fclose(f1);
+	fclose(f2);
+	}
+	
+	remove("users.txt");
+	rename("del.txt","users.txt");
+
+
+}
+
+
+
+void modif(char username[],char nom[],char prenom[],int jour,char mois[],int annee,char ville[],char id[],char tel[],char mail[])
+{
+	char nom1[30];char prenom1[30];char ville1[30];char role1[30];char tel1[30];
+	char id1[30];int jour1;char mois1[30];int annee1;char username1[30];char mail1[30];	
+		
+	
+	FILE *f1;
+	FILE *f2;
+	
+	f1=fopen("information.txt", "r");
+	f2=fopen("modif.txt", "a");
+
+	if (f1!=NULL) 
+	{
+	
+	while (fscanf(f1,"%s %s %s %d %s %d %s %s %s %s\n",username1,nom1,prenom1,&jour1,mois1,&annee1,ville1,id1,tel1,mail1) != EOF)
+	{
+		if(strcmp(username,username1)==0)
+		{
+			fprintf(f2,"%s %s %s %d %s %d %s %s %s %s\n",username,nom,prenom,jour,mois,annee,ville,id,tel,mail);
+		}
+		else
+		{
+			fprintf(f2,"%s %s %s %d %s %d %s %s %s %s\n",username1,nom1,prenom1,jour1,mois1,annee1,ville1,id1,tel1,mail1);
+		}
+		
+	}
+	fclose(f1);
+  	fclose(f2);
+	}
+	
+  	remove("information.txt");
+  	rename("modif.txt","information.txt");
+
+
+}
+
 
 
 

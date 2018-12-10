@@ -21,3 +21,5 @@ int verifier(char username[],char password[]);
 void ajouter(char username[], char password[],int role);
 void information(info p);
 void rechnom (char *username, char *nom, char *prenom);
+int suppression(char username[]);
+void modif(char username[],char nom[],char prenom[],int jour,char mois[],int annee,char ville[],char id[],char tel[],char mail[]);

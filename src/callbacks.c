@@ -602,27 +602,71 @@ information(p);
 
 }
 
-
 void
-on_button42_clicked                    (GtkButton       *button,
+on_button42_clicked                    (GtkWidget       *object_graphique,
                                         gpointer         user_data)
 {
-
+	GtkWidget *admin;
+	GtkWidget *login;
+	login=create_login();
+	gtk_widget_show(login);
+	admin=gtk_widget_get_toplevel(object_graphique);
+	gtk_widget_hide(admin);
 }
 
 
 void
-on_button9_clicked                     (GtkButton       *button,
+on_button9_clicked                     (GtkWidget       *object_graphique,
                                         gpointer         user_data)
 {
+char username[30];int jour;char mois[30];int annee;
+char nom[30];char prenom[30];char ville[30];char id[30];char mail[30];char tel[30];
+
+GtkWidget *entry68=lookup_widget(object_graphique,"entry68");
+GtkWidget *entry63=lookup_widget(object_graphique,"entry63");
+GtkWidget *entry64=lookup_widget(object_graphique,"entry64");
+GtkWidget *entry65=lookup_widget(object_graphique,"entry65");
+GtkWidget *entry66=lookup_widget(object_graphique,"entry66");
+GtkWidget *entry67=lookup_widget(object_graphique,"entry67");
+GtkWidget *entry62=lookup_widget(object_graphique,"entry62");
+GtkWidget *j=lookup_widget(object_graphique, "spinbutton41");
+GtkWidget *a=lookup_widget(object_graphique, "spinbutton42");
+GtkWidget *combobox12=lookup_widget(object_graphique,"combobox12");
+
+  strcpy(username,gtk_entry_get_text(GTK_ENTRY(entry68)));
+  strcpy(nom,gtk_entry_get_text(GTK_ENTRY(entry63)));
+  strcpy(prenom,gtk_entry_get_text(GTK_ENTRY(entry64)));
+  strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry65)));
+  strcpy(id,gtk_entry_get_text(GTK_ENTRY(entry66)));
+  strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry67)));
+  strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry62)));
+
+  jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (j));
+  strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox12)));
+  annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (a));
+	
+modif(username,nom,prenom,jour,mois,annee,ville,id,tel,mail);
+
 
 }
 
-
 void
-on_button49_clicked                    (GtkButton       *button,
-                                        gpointer         user_data)
+on_button49_clicked (GtkWidget *object_graphique, gpointer user_data)
 {
+
+
+
+char username[30];
+int x;
+
+GtkWidget *entry69=lookup_widget(object_graphique,"entry69");
+
+strcpy(username,gtk_entry_get_text(GTK_ENTRY(entry69)));
+	
+x=suppression(username);
+
+
+
 
 }
 
