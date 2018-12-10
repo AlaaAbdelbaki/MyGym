@@ -1248,7 +1248,7 @@ create_coach (void)
                     G_CALLBACK (on_button52_clicked),
                     NULL);
   g_signal_connect ((gpointer) button53, "clicked",
-                    G_CALLBACK (on_button53_enter),
+                    G_CALLBACK (on_button53_clicked),
                     NULL);
   g_signal_connect ((gpointer) button15, "clicked",
                     G_CALLBACK (on_button15_enter),
@@ -3075,7 +3075,7 @@ create_diet (void)
   GLADE_HOOKUP_OBJECT (diet, entry74, "entry74");
   GLADE_HOOKUP_OBJECT (diet, label561, "label561");
   GLADE_HOOKUP_OBJECT (diet, label556, "label556");
-  
+
 
   return diet;
 }
@@ -3780,4 +3780,3 @@ create_admin (void)
   treeprofile(treeview10);
   return admin;
 }
-

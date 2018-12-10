@@ -50,7 +50,7 @@ on_button52_clicked                    (GtkButton       *button,
                                         gpointer         user_data);
 
 void
-on_button53_enter                      (GtkButton       *button,
+on_button53_clicked                      (GtkButton       *button,
                                         gpointer         user_data);
 
 void

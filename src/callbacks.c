@@ -48,7 +48,37 @@ else if(verifier(username,password)==2)
 	coach=create_coach();
 	gtk_widget_show(coach);
 	gtk_widget_destroy(login);
-
+  GtkWidget *name;
+  GtkWidget *surname;
+  GtkWidget *bday;
+  GtkWidget *cin;
+  FILE *f2;
+  name=lookup_widget(objet_graphique,"label306");
+  surname=lookup_widget(objet_graphique,"label307");
+  bday=lookup_widget(objet_graphique,"label308");
+  cin=lookup_widget(objet_graphique,"label309");
+  char user[20];
+  char nom[20];
+  char prenom[20];
+  char date[2];
+  char mois[10];
+  char annee[4];
+  char town[10];
+  char carte[20];
+  char num[10];
+  char email[20];
+  f2=fopen("information.txt","r");
+  while(!EOF)
+  {
+  fscanf(f2,"%s %s %s %s %s %s %s %s %s %s %s",user,nom,prenom,date,mois,annee,town,carte,num,email);
+  if(strcmp(user,username)==0)
+  {
+    gtk_label_set_text(GTK_LABEL(name),nom);
+    gtk_label_set_text(GTK_LABEL(surname),prenom);
+    gtk_label_set_text(GTK_LABEL(bday),date);
+    gtk_label_set_text(GTK_LABEL(cin),carte);
+  }
+  }
 	}
 
 else if(verifier(username,password)==3)
@@ -76,9 +106,9 @@ else if(verifier(username,password)==6)
 	gtk_widget_show(nutritonniste);
 	gtk_widget_destroy(login);
 	}
-	FILE *f=fopen("current.txt","w+");
-	fprintf(f,"%s",username);
-	fclose(f);
+  FILE *f=fopen("current.txt","w+");
+  fprintf(f,"%s",username);
+  fclose(f);
 }
 
 
@@ -251,7 +281,7 @@ on_button51_clicked                    (GtkButton       *button,
   f2=fopen("rdv.txt","a+");
   fscanf(f1,"%s",coach);
   fclose(f1);
-  fprintf(f2,"%s %s %d %s %d %d",coach,user,day,month,year,time);
+  fprintf(f2,"%s %s %d %s %d %d \n",coach,user,day,month,year,time);
   fclose(f2);
 }
 
@@ -260,15 +290,19 @@ void
 on_button52_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *user;
+  char username[50];
+  user=lookup_widget(button,"entry70");
+  strcpy(username,gtk_entry_get_text(GTK_ENTRY(user)));
+  supprdv(username);
 }
 
 
 void
-on_button53_enter                      (GtkButton       *button,
+on_button53_clicked                     (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  
 }
 
 
