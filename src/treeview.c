@@ -135,96 +135,72 @@ store = gtk_tree_view_get_model(liste);
 	}
 
 }
-/*enum
+enum
 {
-	ADHERANTB
-	APOIDS2,
-	NPOIDS2,
-	ATAILLE2,
-	NTAILLE2,
-	CMI,
-	COMMENT,
+	NOMC,
+	PRENOMC,
+	TELC,
+	MAILC,
+	COLUMNSC
 };
-void treerap(GtkWidget *liste,char *user)
+
+void treecoach(GtkWidget *liste)
 {
-	GtkListStore *store;
-	GtkCellRenderer *renderer;
-	GtkTreeViewColumn *column;
-	GtkTreeIter iter;
 
-	char adherant[50];
-	char ataille[50];
-	char ntaille[50];
-	char apoids[50];
-	char npoids[50];
-	char cmi[50];
-	char comment[50];
-	store=NULL;
 
-	FILE *f;
+GtkListStore *store;
+GtkCellRenderer *renderer;
+GtkTreeViewColumn *column;
+GtkTreeIter iter;
 
-	store = gtk_tree_view_get_model(liste);
+char username[50];
+char nom[50];
+char prenom[50];
+char password[50];
+char ville[50];
+char id[50];
+char mail[50];char jour[50];char mois[50];char annee[50];char tel[50];char role[50];
+store=NULL;
 
-		if(store==NULL)
+FILE *f;
+store = gtk_tree_view_get_model(liste);
+
+	if(store==NULL)
+	{
+		renderer = gtk_cell_renderer_text_new();
+		column = gtk_tree_view_column_new_with_attributes(" nom",renderer,"text",NOMC,NULL);
+		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
+
+		renderer = gtk_cell_renderer_text_new();
+		column = gtk_tree_view_column_new_with_attributes(" prenom",renderer,"text",PRENOMC,NULL);
+		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
+
+		renderer = gtk_cell_renderer_text_new();
+		column = gtk_tree_view_column_new_with_attributes(" tel",renderer,"text",TELC,NULL);
+		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
+
+		renderer = gtk_cell_renderer_text_new();
+		column = gtk_tree_view_column_new_with_attributes(" mail",renderer,"text",MAILC,NULL);
+		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
+	}
+
+	store = gtk_list_store_new(COLUMNSC,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING);
+
+	f=fopen("information.txt","r");
+	if(f!=NULL)
+	{
+
+
+              while(fscanf(f,"%s %s %s %s %s %s %s %s %s %s\n",username,nom,prenom,jour,mois,annee,ville,id,tel,mail)!=EOF)
 		{
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" adherant",renderer,"text",ADHERANTB,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" Ancienne Taille",renderer,"text",ATAILLE2,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" Nouvelle Taille",renderer,"text",NTAILLE2,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" Ancien Poids",renderer,"text",APOIDS2,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" Nouveau Poids",renderer,"text",NPOIDS2,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" CMI",renderer,"text",CMI,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-			renderer = gtk_cell_renderer_text_new();
-			column = gtk_tree_view_column_new_with_attributes(" Commentaire",renderer,"text",COMMENT,NULL);
-			gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
-
-
-
-
-
+			gtk_list_store_append (store, &iter);
+			gtk_list_store_set (store,&iter,NOM,nom,PRENOM,prenom,TEL,tel,MAIL,mail,-1);
 		}
-
-		store = gtk_list_store_new(COLUMNSR,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING);
-
-		f=fopen("rapport.txt","r");
-		if(f==NULL)
-		{
-
-			return;
 		}
-		else
-		{
-	 		f = fopen("rapport.txt", "a+");
-
-	              while(fscanf(f,"%s %s %s %s %s %s %s\n",adherant,ataille,ntaille,apoids,npoids,cmi,comment)!=EOF)
-			{
-				if(!strcmp(adherant,user)){
-				gtk_list_store_append (store, &iter);
-				gtk_list_store_set (store,&iter,ADHERANTA,adherant,ATAILLE2,ataille,NTAILLE2,ntaille,APOIDS2,apoids,NPOIDS2,npoids,CMI,cmi,COMMENT,comment,-1);
-			}
-			}
-			fclose(f);
-			gtk_tree_view_set_model (GTK_TREE_VIEW (liste),  GTK_TREE_MODEL (store));
-	    		g_object_unref (store);
-		}
-}*/
+		fclose(f);
+		gtk_tree_view_set_model (GTK_TREE_VIEW (liste),  GTK_TREE_MODEL (store));
+  	g_object_unref (store);
+}
 enum
 {
 	ADHERANTA,
@@ -340,27 +316,27 @@ store = gtk_tree_view_get_model(liste);
 	if(store==NULL)
 	{
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" adherant",renderer,"text",ADHERANT,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Staff",renderer,"text",ADHERANT,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" staff",renderer,"text",STAFF,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Adhérant",renderer,"text",STAFF,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" jour",renderer,"text",JOURX,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Jour",renderer,"text",JOURX,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" mois",renderer,"text",MOISX,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Mois",renderer,"text",MOISX,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" annee",renderer,"text",ANNEEX,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Année",renderer,"text",ANNEEX,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes(" heure",renderer,"text",HEUREX,NULL);
+		column = gtk_tree_view_column_new_with_attributes(" Heure",renderer,"text",HEUREX,NULL);
 		gtk_tree_view_append_column (GTK_TREE_VIEW (liste),column);
 
 
@@ -370,7 +346,7 @@ store = gtk_tree_view_get_model(liste);
 
 	store = gtk_list_store_new(COLUMNSX,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING,G_TYPE_STRING);
 
-	f=fopen("Rendez.txt","r");
+	f=fopen("rdv.txt","r");
 	if(f==NULL)
 	{
 
@@ -378,11 +354,11 @@ store = gtk_tree_view_get_model(liste);
 	}
 	else
 	{
- 		f = fopen("Rendez.txt", "a+");
+ 		f = fopen("rdv.txt", "a+");
 
               while(fscanf(f,"%s %s %s %s %s %s\n",adherant,staff,jour,mois,annee,heure)!=EOF)
 		{
-			if(!strcmp(staff,username)){
+			if(strcmp(staff,username)){
 			gtk_list_store_append (store, &iter);
 			gtk_list_store_set (store,&iter,ADHERANT,adherant,STAFF,staff,JOURX,jour,MOISX,mois,ANNEEX,annee,HEUREX,heure,-1);
 		}

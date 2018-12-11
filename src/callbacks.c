@@ -322,6 +322,9 @@ void
 on_button53_clicked                     (GtkButton       *button,
                                         gpointer         user_data)
 {
+  GtkWidget *tree;
+  tree=lookup_widget(button,"treeview11");
+  treerdv(tree);
 
 }
 
@@ -330,7 +333,9 @@ void
 on_button15_enter                      (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *treeviewcoach;
+  treeviewcoach=lookup_widget(button,"treeviewcoach");
+  treecoach(treeviewcoach);
 }
 
 
