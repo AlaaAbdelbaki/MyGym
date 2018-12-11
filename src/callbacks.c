@@ -339,7 +339,6 @@ on_button15_enter                      (GtkButton       *button,
 }
 
 
-void
 on_button54_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
@@ -479,6 +478,34 @@ void
 on_button36_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
+GtkWidget *date;
+  GtkWidget *mois;
+  GtkWidget *annee;
+  GtkWidget *heure;
+  GtkWidget *username;
+  int day;
+  char month[10];
+  int year;
+  char user[20];
+  char kine[20];
+  int time;
+  FILE *f1,*f2;
+  date=lookup_widget(button,"spinbutton38");
+  mois=lookup_widget(button,"combobox10");
+  annee=lookup_widget(button,"spinbutton39");
+  heure=lookup_widget(button,"spinbutton40");
+  username=lookup_widget(button,"entry59");
+  strcpy(month,gtk_combo_box_get_active_text(GTK_COMBO_BOX(mois)));
+  day=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(date));
+  year=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(annee));
+  time=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(heure));
+  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
+  f1=fopen("current.txt","r");
+  f2=fopen("rdv.txt","a+");
+  fscanf(f1,"%s",kine);
+  fclose(f1);
+  fprintf(f2,"%s %s %d %s %d %d \n",kine,user,day,month,year,time);
+  fclose(f2);
 
 }
 
@@ -486,8 +513,11 @@ on_button36_clicked                    (GtkButton       *button,
 void
 on_button37_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
-{
-
+{GtkWidget *user;
+  char username[50];
+  user=lookup_widget(button,"entry59");
+  strcpy(username,gtk_entry_get_text(GTK_ENTRY(user)));
+  supprrv(username);
 }
 
 
@@ -495,6 +525,9 @@ void
 on_button38_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
+GtkWidget *tree;
+  tree=lookup_widget(button,"treeview9");
+  treerdv(tree);
 
 }
 
@@ -502,7 +535,7 @@ on_button38_clicked                    (GtkButton       *button,
 void
 on_button12_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
-{
+{ 
 
 }
 
@@ -510,7 +543,13 @@ on_button12_clicked                    (GtkButton       *button,
 void
 on_button55_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
-{
+{GtkWidget *username;
+  GtkWidget *tree;
+  char user[20];
+  username=lookup_widget(button,"entry73");
+  tree=lookup_widget(button,"treeview13");
+  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
+  treerapp(tree,user);
 
 }
 

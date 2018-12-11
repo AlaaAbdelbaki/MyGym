@@ -251,7 +251,39 @@ void supprdv(char username[])
 	remove("rdv.txt");
 	rename("nvrdv.txt","rdv.txt");
 	}
+void supprrv(char username[])
+{
+	char user1[20];
+	char user2[20];
+	int jour;
+	char mois[10];
+	int annee;
+	int heure;
 
+	FILE *f1;
+	FILE *f2;
+
+	f1=fopen("rdv.txt","r");
+	f2=fopen("nvrdv.txt","a");
+
+	if (f1!=NULL)
+	{
+
+	while (fscanf(f1,"%s %s %d %s %d %d \n",user1,user2,&jour,mois,&annee,&heure) != EOF)
+	{
+		if (strcmp(username,user2)!=0)
+		{
+			fprintf(f2,"%s %s %d %s %d %d \n",user1,user2,jour,mois,annee,heure);
+
+		}
+	}
+	fclose(f1);
+	fclose(f2);
+	}
+
+	remove("rdv.txt");
+	rename("nvrdv.txt","rdv.txt");
+	}
 
 /*-------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------*/
