@@ -62,6 +62,60 @@ void rechnom (char *username, char *nom, char *prenom){
 	}
 	fclose(f);
 }
+int rechfiche (char *username){
+	FILE *f=fopen("fiche.txt","r");
+	char user[20];
+	int x1,x2,x3,x4,x5;
+	while(fscanf(f,"%s %d %d %d %d %d\n",user,&x1,&x2,&x3,&x4,&x5)!=EOF){
+		if(strcmp(user,username)==0){
+			fclose(f);
+			return 1;
+		}
+	}
+	fclose(f);
+	return 0;
+}
+int rechrdv(char *useradh,char *usermed,int jour,char *mois,int annee,int hour){
+	FILE *f=fopen("Rendez.txt","r");
+	char useradhx[20];
+	char usermedx[20];
+	int jourx;
+	char moisx[20];
+	int anneex;
+	int hourx;
+	while(fscanf(f,"%s %s %d %s %d %d\n",useradhx,usermedx,&jourx,moisx,&anneex,&hourx)!=EOF){
+		if((((jour==jourx)&&(!strcmp(mois,moisx)))&&(anneex==annee))&&(hourx==hour)){
+			if((!strcmp(useradh,useradhx))||(!strcmp(usermed,usermedx))){
+				fclose(f);
+				return 1;
+			}
+		}
+	}
+	fclose(f);
+	return 0;
+}
+void affichprof(GtkWidget *label470,GtkWidget *label467,GtkWidget *label468,GtkWidget *label469){
+  FILE *f=fopen("current.txt","r");
+  char username[20];
+  fscanf(f,"%s",username);
+  fclose(f);
+
+  f=fopen("information.txt","r");
+  info p;
+  while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",p.username,p.nom,p.prenom,&(p.jour),p.mois,&(p.annee),p.ville,p.id,p.tel,p.mail)!=EOF){
+  	if(strcmp(p.username,username)==0){
+		break;
+	}
+  }
+  fclose(f);
+  char date[20];
+  sprintf(date,"%d/%s/%d",p.jour,p.mois,p.annee);
+
+  gtk_label_set_text(label470,p.nom);
+  gtk_label_set_text(label469,p.prenom);
+  gtk_label_set_text(label468,date);
+  gtk_label_set_text(label467,p.id);
+}
 
 
 int suppression(char username[])

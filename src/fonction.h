@@ -23,3 +23,6 @@ void information(info p);
 void rechnom (char *username, char *nom, char *prenom);
 int suppression(char username[]);
 void modif(char username[],char nom[],char prenom[],int jour,char mois[],int annee,char ville[],char id[],char tel[],char mail[]);
+void affichprof(GtkWidget *label470,GtkWidget *label467,GtkWidget *label468,GtkWidget *label469);
+int rechrdv(char *useradh,char *usermed,int jour,char *mois,int annee,int hour);
+int rechfiche (char *username);

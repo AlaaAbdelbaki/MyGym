@@ -302,7 +302,7 @@ void
 on_button53_clicked                     (GtkButton       *button,
                                         gpointer         user_data)
 {
-  
+
 }
 
 
@@ -318,7 +318,13 @@ void
 on_button54_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *username;
+  GtkWidget *tree;
+  char user[20];
+  username=lookup_widget(button,"entry72");
+  tree=lookup_widget(button,"treeview12");
+  strcpy(user,gtk_entry_get_text(GTK_ENTRY(username)));
+  treerapp(tree,user);
 }
 
 
@@ -538,7 +544,28 @@ void
 on_buttondietrv10_clicked              (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+      GtkWidget *combobox1=lookup_widget(button,"comboboxdietrv");
+      GtkWidget *j=lookup_widget(button, "spinbuttondietrv1");
+      GtkWidget *a=lookup_widget(button, "spinbuttondietrv2");
+      GtkWidget *h=lookup_widget(button, "spinbutton21");
+      GtkWidget *entry1=lookup_widget(button,"dietenteruserrv");
+      int jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
+      int annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
+      int hour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (h));
+      char mois[15];
+      char user[20];
+      char username[20];
+      strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox1)));
+      strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+      FILE *f=fopen("current.txt","r");
+      fscanf(f,"%s",username);
+      fclose(f);
+      int x=rechrdv(user,username,jour,mois,annee,hour);
+      if(!x){
+      f=fopen("Rendez.txt","a+");
+      fprintf(f,"%s %s %d %s %d %d\n",user,username,jour,mois,annee,hour);
+      fclose(f);
+      }
 }
 
 
@@ -546,7 +573,34 @@ void
 on_buttondietrv20_clicked              (GtkButton       *button,
                                         gpointer         user_data)
 {
+  GtkWidget *combobox1=lookup_widget(button,"comboboxdietrv");
+      GtkWidget *j=lookup_widget(button, "spinbuttondietrv1");
+      GtkWidget *a=lookup_widget(button, "spinbuttondietrv2");
+      GtkWidget *h=lookup_widget(button, "spinbutton21");
+      int jour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (j));
+      int annee=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (a));
+      int hour=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (h));
+      char mois[15];
+      strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(combobox1)));
 
+  	char userx[20];
+  	char usernamex[20];
+  	int jourx;
+  	char moisx[20];
+  	int anneex;
+  	int hourx;
+  	FILE *f=fopen("Rendez.txt","r");
+  	FILE *ft=fopen("r.txt","w+");
+  	while(fscanf(f,"%s %s %d %s %d %d\n",userx,usernamex,&jourx,moisx,&anneex,&hourx)!=EOF){
+  		if((((jour!=jourx)&&(strcmp(mois,moisx)))&&(anneex!=annee))&&(hourx!=hour)){
+  			fprintf(ft,"%s %s %d %s %d %d\n",userx,usernamex,jourx,moisx,anneex,hourx);
+  		}
+  	}
+  	fclose(f);
+  	fclose(ft);
+
+  	remove("Rendez.txt");
+  	rename("r.txt","Rendez.txt");
 }
 
 
@@ -554,7 +608,11 @@ void
 on_buttondietrv30_clicked              (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *diet;
+  	GtkWidget *treeview10;
+  	diet = lookup_widget(button,"diet");
+  	treeview10=lookup_widget(diet,"treeviewdiet22");
+  	treerdv(treeview10);
 }
 
 
@@ -562,7 +620,11 @@ void
 on_buttondietaff_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *diet;
+  	GtkWidget *treeview10;
+  	diet = lookup_widget(button,"diet");
+  	treeview10=lookup_widget(diet,"treeviewdiet1");
+  	treefich(treeview10);
 }
 
 
@@ -570,7 +632,45 @@ void
 on_buttondietadd_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
+  GtkWidget *m=lookup_widget(button, "spinbuttondietrama");
+  	int matin=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (m));
+  	GtkWidget *mi=lookup_widget(button, "spinbuttonrami");
+  	int midi=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (mi));
+  	GtkWidget *s=lookup_widget(button, "spinbuttonraso");
+  	int soir=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (s));
+  	GtkWidget *entry1=lookup_widget(button,"dietenteruser");
+  	char user[20];
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	int x=rechfiche(user);
+  	if(!x){
+  	FILE *f=fopen("fiche.txt","a+");
+  	fprintf(f,"%s 0 0 %d %d %d\n",user,matin,midi,soir);
+  	fclose(f);
+  	}
+  	else{
+  	char userx[20];
+  	int ch1;
+  	int ch2;
+  	int ch3;
+  	int ch4;
+  	int ch5;
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	FILE *f=fopen("fiche.txt","r");
+  	FILE *ft=fopen("r.txt","w+");
+  	while(fscanf(f,"%s %d %d %d %d %d\n",userx,&ch1,&ch2,&ch3,&ch4,&ch5)!=EOF){
+  		if(strcmp(user,userx)){
+  			fprintf(ft,"%s %d %d %d %d %d\n",userx,ch1,ch2,ch3,ch4,ch5);
+  		}
+  		else{
+  			fprintf(ft,"%s %d %d %d %d %d\n",userx,ch1,ch2,matin,midi,soir);
+  		}
+  	}
+  	fclose(f);
+  	fclose(ft);
 
+  	remove("fiche.txt");
+  	rename("r.txt","fiche.txt");
+  	}
 }
 
 
@@ -578,7 +678,45 @@ void
 on_buttondietmod_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
+  GtkWidget *m=lookup_widget(button, "spinbuttondietrama");
+  	int matin=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (m));
+  	GtkWidget *mi=lookup_widget(button, "spinbuttonrami");
+  	int midi=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (mi));
+  	GtkWidget *s=lookup_widget(button, "spinbuttonraso");
+  	int soir=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (s));
+  	GtkWidget *entry1=lookup_widget(button,"dietenteruser");
+  	char user[20];
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	int x=rechfiche(user);
+  	if(!x){
+  	FILE *f=fopen("fiche.txt","a+");
+  	fprintf(f,"%s 0 0 %d %d %d\n",user,matin,midi,soir);
+  	fclose(f);
+  	}
+  	else{
+  	char userx[20];
+  	int ch1;
+  	int ch2;
+  	int ch3;
+  	int ch4;
+  	int ch5;
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	FILE *f=fopen("fiche.txt","r");
+  	FILE *ft=fopen("r.txt","w+");
+  	while(fscanf(f,"%s %d %d %d %d %d\n",userx,&ch1,&ch2,&ch3,&ch4,&ch5)!=EOF){
+  		if(strcmp(user,userx)){
+  			fprintf(ft,"%s %d %d %d %d %d\n",userx,ch1,ch2,ch3,ch4,ch5);
+  		}
+  		else{
+  			fprintf(ft,"%s %d %d %d %d %d\n",userx,ch1,ch2,matin,midi,soir);
+  		}
+  	}
+  	fclose(f);
+  	fclose(ft);
 
+  	remove("fiche.txt");
+  	rename("r.txt","fiche.txt");
+  	}
 }
 
 
@@ -586,7 +724,27 @@ void
 on_buttondietdel_clicked               (GtkButton       *button,
                                         gpointer         user_data)
 {
+  GtkWidget *entry1=lookup_widget(button,"dietenteruser");
+  	char user[20];
+  	char userx[20];
+  	int ch1;
+  	int ch2;
+  	int ch3;
+  	int ch4;
+  	int ch5;
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	FILE *f=fopen("fiche.txt","r");
+  	FILE *ft=fopen("r.txt","w+");
+  	while(fscanf(f,"%s %d %d %d %d %d\n",userx,&ch1,&ch2,&ch3,&ch4,&ch5)!=EOF){
+  		if(strcmp(user,userx)){
+  			fprintf(ft,"%s %d %d %d %d %d\n",userx,ch1,ch2,ch3,ch4,ch5);
+  		}
+  	}
+  	fclose(f);
+  	fclose(ft);
 
+  	remove("fiche.txt");
+  	rename("r.txt","fiche.txt");
 }
 
 
@@ -594,7 +752,14 @@ void
 on_button56_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+  GtkWidget *diet;
+  	GtkWidget *treeview10;
+  	GtkWidget *entry1=lookup_widget(button,"entry74");
+  	char user[20];
+  	strcpy(user,gtk_entry_get_text(GTK_ENTRY(entry1)));
+  	diet = lookup_widget(button,"diet");
+  	treeview10=lookup_widget(diet,"treeview14");
+  	treerapp(treeview10,user);
 }
 
 
@@ -765,4 +930,3 @@ on_button29_clicked                    (GtkButton       *button,
 {
 
 }
-
