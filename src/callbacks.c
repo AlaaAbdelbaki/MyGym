@@ -117,40 +117,18 @@ void
 on_button32_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-	FILE *fp=fopen("current.txt","r");
-	char username[20];
-	fscanf(fp,"%s",username);
-	fclose(fp);
-	char mail[20];
-	char tel[20];
-	char ville[20];
-	GtkWidget *entry1=lookup_widget(button,"entry45");
-	GtkWidget *entry2=lookup_widget(button,"entry46");
-	GtkWidget *entry3=lookup_widget(button,"entry47");
-	strcpy(ville,gtk_entry_get_text(GTK_ENTRY(entry1)));
-	strcpy(tel,gtk_entry_get_text(GTK_ENTRY(entry3)));
-	strcpy(mail,gtk_entry_get_text(GTK_ENTRY(entry2)));
-	FILE *f=fopen("information.txt","r");
-	info *tab;
-	int i=0;
-	tab=(info *)malloc(sizeof(info));
-	while(fscanf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,&(tab[i].jour),tab[i].mois,&(tab[i].jour),tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail)!=EOF){
-		if(strcmp(tab[i].username,username)==0){
-			strcpy(tab[i].ville,ville);
-			strcpy(tab[i].tel,tel);
-			strcpy(tab[i].mail,mail);
-		}
-		i++;
-		tab=(info *)realloc(tab,(i+1)*sizeof(info));
-	}
-	fclose(f);
-	f=fopen("information.txt","w+");
-	int j=i;
-	i=0;
-	for(i=0;i<j;i++){
-		fprintf(f,"%s %s %s %d %s %d %s %s %s %s\n",tab[i].username,tab[i].nom,tab[i].prenom,tab[i].jour,tab[i].mois,tab[i].jour,tab[i].ville,tab[i].id,tab[i].tel,tab[i].mail);
-	}
-	fclose(f);
+char ville[100],email[100];
+char numtel[20];
+GtkWidget *input1;
+GtkWidget *input2;
+GtkWidget *input3;
+input1=lookup_widget(button,"entry45");
+input2=lookup_widget(button,"entry46");
+input3=lookup_widget(button,"entry47");
+strcpy(ville,gtk_entry_get_text(GTK_ENTRY(input1)));
+strcpy(email,gtk_entry_get_text(GTK_ENTRY(input2)));
+strcpy(numtel,gtk_entry_get_text(GTK_ENTRY(input3)));
+Modifierprofil(ville, email, numtel);
 }
 
 
@@ -158,7 +136,7 @@ void
 on_button41_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+gtk_main_quit();
 }
 
 
@@ -166,7 +144,25 @@ void
 on_button22_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char date[10],mois[12],annee[7],heure[6],user[100];
+GtkWidget *input1;
+GtkWidget *input2;
+GtkWidget *input3;
+GtkWidget *input4;
+GtkWidget *input5;
+input1=lookup_widget(button,"spinbutton27");
+input2=lookup_widget(button,"combobox5");
+input3=lookup_widget(button,"spinbutton28");
+input4=lookup_widget(button,"spinbutton29");
+input5=lookup_widget(button,"entry41");
+//dt_resr.input1=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input1));
+//dt_resr.input2=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input2));
+strcpy(date,gtk_entry_get_text(GTK_ENTRY(input1)));
+strcpy(mois,gtk_combo_box_get_active_text(GTK_COMBO_BOX(input2)));
+strcpy(annee,gtk_entry_get_text(GTK_ENTRY(input3)));
+strcpy(heure,gtk_entry_get_text(GTK_ENTRY(input4)));
+strcpy(user,gtk_entry_get_text(GTK_ENTRY(input5)));
+AjouterRdv(date,mois,annee,heure,user);
 }
 
 
@@ -174,7 +170,13 @@ void
 on_button23_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char user[100];
+GtkWidget *input1;
+input1=lookup_widget(button,"entry41");
+//dt_resr.input1=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input1));
+//dt_resr.input2=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input2));
+strcpy(user,gtk_entry_get_text(GTK_ENTRY(input1)));
+supprimerRdv(user);
 }
 
 
@@ -182,7 +184,13 @@ void
 on_button24_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char nom[100];
+GtkWidget *treeview5;
+GtkWidget *input;
+input=lookup_widget(button,"entry41");
+treeview5=lookup_widget(button,"treeview5");
+strcpy(nom,gtk_entry_get_text(GTK_ENTRY(input)));
+AfficherRdv(nom,treeview5);
 }
 
 
@@ -190,7 +198,13 @@ void
 on_button28_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char nom[100];
+GtkWidget *treeview7;
+GtkWidget *input;
+input=lookup_widget(button,"entry75");
+treeview7=lookup_widget(button,"treeview7");
+strcpy(nom,gtk_entry_get_text(GTK_ENTRY(input)));
+afficherFM(nom,treeview7);
 }
 
 
@@ -198,7 +212,13 @@ void
 on_button30_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char nom[100];
+GtkWidget *treeview8;
+GtkWidget *input;
+input=lookup_widget(button,"entry71");
+treeview8=lookup_widget(button,"treeview8");
+strcpy(nom,gtk_entry_get_text(GTK_ENTRY(input)));
+AfficherRapport(nom,treeview8);
 }
 
 
@@ -913,7 +933,13 @@ void
 on_button58_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char user[100];
+GtkWidget *input1;
+input1=lookup_widget(button,"entry75");
+//dt_resr.input1=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input1));
+//dt_resr.input2=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input2));
+strcpy(user,gtk_entry_get_text(GTK_ENTRY(input1)));
+supprimerFicheMedicale(user);
 }
 
 
@@ -921,12 +947,36 @@ void
 on_button57_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char user[100],poids[7],taille[6];
+GtkWidget *input1;
+GtkWidget *input2;
+GtkWidget *input3;
+input1=lookup_widget(button,"spinbutton34");
+input2=lookup_widget(button,"spinbutton33");
+input3=lookup_widget(button,"entry75");
+//dt_resr.input1=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input1));
+//dt_resr.input2=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input2));
+strcpy(taille,gtk_entry_get_text(GTK_ENTRY(input1)));
+strcpy(poids,gtk_entry_get_text(GTK_ENTRY(input2)));
+strcpy(user,gtk_entry_get_text(GTK_ENTRY(input3)));
+AjouterFicheMedicale(user,taille,poids);
 }
 
 void
 on_button29_clicked                    (GtkButton       *button,
                                         gpointer         user_data)
 {
-
+char user[100],poids[7],taille[6];
+GtkWidget *input1;
+GtkWidget *input2;
+GtkWidget *input3;
+input1=lookup_widget(button,"spinbutton34");
+input2=lookup_widget(button,"spinbutton33");
+input3=lookup_widget(button,"entry75");
+//dt_resr.input1=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input1));
+//dt_resr.input2=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (input2));
+strcpy(taille,gtk_entry_get_text(GTK_ENTRY(input1)));
+strcpy(poids,gtk_entry_get_text(GTK_ENTRY(input2)));
+strcpy(user,gtk_entry_get_text(GTK_ENTRY(input3)));
+ModifierFicheMedicales(user,taille,poids);
 }
